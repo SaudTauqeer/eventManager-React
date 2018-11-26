@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* background image for all pages */
+body {
+    background-image: url("../images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+ }
+ html {
+    position: relative;
+    min-height: 100%;
+  }
+ 
+.taglineJumbotron {
+    background-color: 
+    #01638d;
+} 
+
+
+.IndexFooter {
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */   
+}

@@ -1,0 +1,68 @@
+import React, {Component,} from "react";
+import "isomorphic-fetch";
+import {Container, Row, Col} from "reactstrap";
+let apiKey = process.env.REACT_APP_TIME_API_KEY;
+
+class Clock extends Component {
+
+
+    componentWillMount(){
+        setInterval(this.fetchTime, 10000);
+    }
+
+    
+    state={
+        fetchUrl: `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=Asia/Karachi`,
+        h: null,
+        m: null,
+        isTimeLoaded: false,
+        executeTimeHour: this.executeTimeHour,
+        executeTimeMinutes:this.executeTimeMinutes
+
+    }
+
+        fetchTime = ()=> {
+        fetch(this.state.fetchUrl).
+        then(response => response.json()).
+        then(json => json.formatted).
+        then(dateTime => {
+            //extracing time from date
+            let timeOnly = dateTime.slice(11 , 16);
+            let hour = timeOnly.charAt(0) + timeOnly.charAt(1);
+            let h = parseInt(hour);
+            let m = timeOnly.charAt(3) + timeOnly.charAt(4);
+            m = parseInt(m, 10);
+
+            //setting update hours and mins in state
+                this.setState({ 
+                    h,
+                    m,
+                    isTimeLoaded: true
+              });
+        })};
+
+
+    render() {
+        return (
+            <div>
+            <Container className="text-center text-white mt-3">
+                <Row>
+                <Col>
+                
+                <p className="text-white display-4 mb-5">
+                {(this.state.isTimeLoaded) ? `Current time is  ${this.state.h} : ${this.state.m}`: "Time is Loading..." }
+                </p>
+                </Col>
+                </Row>
+                
+            </Container>
+            </div>
+        );
+    }
+}
+
+
+
+        
+    
+export default Clock;
