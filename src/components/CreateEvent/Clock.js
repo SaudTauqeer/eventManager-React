@@ -1,3 +1,4 @@
+//imoports
 import React, {Component,} from "react";
 import "isomorphic-fetch";
 import {Container, Row, Col} from "reactstrap";
