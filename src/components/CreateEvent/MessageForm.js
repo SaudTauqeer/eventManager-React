@@ -29,28 +29,16 @@ class EventInputData extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    axios.post(postEventDataUrl,{
-      event: this.state.event,
-      sendingHour : this.state.sendingHour,
-      sendingMinutes : this.state.sendingMinutes,
-      cardUrl : this.state.cardUrl,
-      date : this.state.date,
-      text : this.state.text,
-      subject : this.state.subject,
-      to : this.state.to,
-      from : this.state.from,
-      html : this.state.html
-    })
-    .then(response => console.log(response))
-    .then(this.setState({
-      error: false,
-      redirect: true
-
-    }))
-    .catch(err => this.setState({
-        error: true,
-        redirect: false
-    }))
+    const config = {
+      withCredentials: true,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    
+    axios.post(postEventDataUrl, {data: this.state}  ,config)
+      .then(res => console.log('axios', res))
+      .catch(err => console.log('axios', err));
   }
 
 

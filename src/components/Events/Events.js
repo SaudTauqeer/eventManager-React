@@ -11,8 +11,7 @@ class Events extends Component {
     state={
         data: [],
         loaded: false,
-        err: false,
-        page: 6 
+        err: false
     }
 
     componentDidMount() {
@@ -101,7 +100,6 @@ class Events extends Component {
             data={this.state.data}
             filterable
             NoDataComponent={() => null}
-            page={this.state.page}
             >
             
             </ReactTable>
@@ -109,4 +107,3 @@ class Events extends Component {
     }
 }
 export default Events;
-

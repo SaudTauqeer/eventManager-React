@@ -26,9 +26,9 @@ import { Card,
             <CardTitle>Never miss an event</CardTitle>
             <CardText>
               Join us for free and manage your events like never before.
-              Get reminded of events via email .
+              Get reminded of events via email.
             </CardText>
-            <a style={{ textDecoration: "none" }} className="btn-lg btn-success btn-block text-center" href="/register" >Register</a>
+            <a style={{ textDecoration: "none" }} className="btn-lg btn-success btn-block text-center" href="http://localhost:3001/auth/google" >Google+ Sign Up</a>
           </CardBody>
         </Card>
         </CardGroup>
@@ -39,10 +39,13 @@ import { Card,
         <Card>
           <CardImg top width="100%" src={imageUrl2} />
           <CardBody>
-            <CardTitle>Already registered on our site?</CardTitle>
-            <CardText>Login here to access your events and manage everything via the dashboard.
+            <CardTitle>Already registered via Google+?</CardTitle>
+            <CardText>Click here to login into your account and manage events.
+            <br />
+
+
             </CardText>
-            <a style={{ textDecoration: "none" }} className="btn-lg btn-info btn-block text-center" href="/login" >Login</a>
+            <a  style={{ textDecoration: "none" }} className="btn-lg btn-info btn-block text-center" href="http://localhost:3001/auth/logout" >Google+ Login</a>
           </CardBody>
         </Card>
         </CardGroup>
