@@ -1,6 +1,5 @@
 // imports
 import React, {Component} from "react";
-import {Container} from "reactstrap";
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
 

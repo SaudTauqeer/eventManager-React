@@ -1,5 +1,7 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,Button } from 'reactstrap';
+
+const googleAuthRoute = "http://localhost:3001/auth/google";
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -25,10 +27,10 @@ export default class Example extends React.Component {
           <Collapse  isOpen={!this.state.collapsed} id="navbarResponsive" navbar>
             <Nav navbar className="navbar-nav ml-auto">
               <NavItem className="navbar-brand">
-                <NavLink className="nav-item text-white" href="/components/">Components</NavLink>
+              <Button className=" text-white btn btn-lg btn-success" href={googleAuthRoute}>Log In</Button>
               </NavItem>
               <NavItem className="navbar-brand">
-                <NavLink className="nav-item text-white " href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <Button className=" text-white btn btn-lg btn-info" href={googleAuthRoute}>Sign Up</Button>
               </NavItem>
             </Nav>
           </Collapse>

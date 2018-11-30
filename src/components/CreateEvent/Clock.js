@@ -23,10 +23,10 @@ class Clock extends Component {
     }
 
         fetchTime = ()=> {
-        fetch(this.state.fetchUrl).
-        then(response => response.json()).
-        then(json => json.formatted).
-        then(dateTime => {
+        fetch(this.state.fetchUrl)
+        .then(response => response.json())
+        .then(json => json.formatted)
+        .then(dateTime => {
             //extracing time from date
             let timeOnly = dateTime.slice(11 , 16);
             let hour = timeOnly.charAt(0) + timeOnly.charAt(1);

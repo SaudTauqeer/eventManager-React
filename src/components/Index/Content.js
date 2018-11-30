@@ -70,32 +70,32 @@ const Content = ()=> (
   <section className="contact bg-primary" id="contact">
         <div className="container">
           <h2>Contact the developer.
-          I <FontAwesome name="heart" size="1x"/>
+          I <FontAwesome name="heart" size="lg"/>
             {" "} new friends!</h2>
           <ul className="list-inline list-social">
             <li className="list-inline-item social-twitter">
               <a  target="blank" href="https://www.linkedin.com/in/saud-tauqeer-16a305172/">
-              <FontAwesome name="linkedin" size="1x"/>
+              <FontAwesome name="linkedin" size="lg"/>
               </a>
             </li>
             <li className="list-inline-item social-facebook">
               <a target="blank" href="https://twitter.com/@Saud31023894">
-              <FontAwesome name="twitter" size="1x"/>
+              <FontAwesome name="twitter" size="lg"/>
               </a>
             </li>
             <li className="list-inline-item social-google-plus">
               <a target="blank" href="mailto:saudtauqeer381@gmail.com?Subject=Hello%20Saud">
-              <FontAwesome name="google" size="1x"/>
+              <FontAwesome name="google" size="lg"/>
               </a>
             </li>
             <li className="list-inline-item social-resume">
               <a target="blank" href="https://saud-resume.netlify.com">
-              <FontAwesome name="male" size="1x"/>
+              <FontAwesome name="male" size="lg"/>
               </a>
             </li>
             <li className="list-inline-item social-github">
               <a target="blank" href="https://github.com/SaudTauqeer">
-              <FontAwesome name="github" size="1x"/>
+              <FontAwesome name="github" size="lg"/>
               </a>
             </li>
           </ul>
