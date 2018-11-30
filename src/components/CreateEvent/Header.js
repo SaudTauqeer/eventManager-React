@@ -1,5 +1,7 @@
 import React from "react";
 
+import Form from "./MessageForm";
+
 const Header = () => (
   <div>
     <header className="masthead">
@@ -7,13 +9,9 @@ const Header = () => (
       <div className="row h-100">
         <div className="col-lg-7 my-auto">
           <div className="header-content mx-auto">
+          <Form />
           </div>
         </div>
-        <div className="col-lg-5 my-auto">
-                <div className="screen">
-                   
-                </div>
-            </div>
           </div>
         </div>
   </header>

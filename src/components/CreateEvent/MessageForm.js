@@ -3,7 +3,6 @@ import {Container, Form, Row, Col, FormGroup, Label, Input,Button,  } from "reac
 import {Redirect} from "react-router-dom";
 const axios = require('axios');
 const postEventDataUrl = "http://localhost:3001/api/event";
-
 class EventInputData extends Component {
 
   state={
@@ -26,6 +25,8 @@ class EventInputData extends Component {
       [e.target.name]: e.target.value
     });
   };
+
+
 
   onSubmit = e => {
     e.preventDefault();
@@ -51,43 +52,43 @@ class EventInputData extends Component {
         }
          return (
           <div>
-          <Container className=" registerForm  ">
+          <Container className=" registerForm pt-5">
           <Form className="text-white">
             <Row form>
-              <Col md={5}>
-                <FormGroup>
+              <Col lg={10}>
+                <FormGroup className="pt-5">
                   <Label >Event Name</Label>
                   <Input type="text" name="event" placeholder="Enter Event name." onChange={this.handleChange} />
     
-                  <Label className="mt-3" > Date </Label>
+                  <Label> Date </Label>
                   <Input type="text" name="date" placeholder=" Enter Date in this format yyyy/mm/dd" 
                   onChange={this.handleChange} />
     
-                  <Label className="mt-3">Sender </Label>
+                  <Label >Sender </Label>
                   <Input type="text" name="from" placeholder="Email" 
                   onChange={this.handleChange} />
     
-                  <Label for="email" className="mt-3"> Receiver </Label>
+                  <Label for="email" > Receiver </Label>
                   <Input type="text" name="to" placeholder="person i want to send email" 
                   onChange={this.handleChange} />
             
-                  <Label  className="mt-3">Hour</Label>
+                  <Label  >Hour</Label>
                   <Input type="text" name="sendingHour"  placeholder="Enter sending hour" 
                   onChange={this.handleChange} />
 
-                  <Label  className="mt-3">Minutes</Label>
+                  <Label  >Minutes</Label>
                   <Input type="text" name="sendingMinutes" placeholder="Enter Sending minutes" 
                   onChange={this.handleChange} />
 
-                  <Label  className="mt-3">Image Url</Label>
+                  <Label  >Image Url</Label>
                   <Input type="text" name="cardUrl" placeholder="Event related image - use image fetcher from navbar" 
                   onChange={this.handleChange} />
 
-                  <Label  className="mt-3">Enter Message body</Label>
+                  <Label  >Enter Message body</Label>
                   <Input type="textarea" name="text" placeholder="Email message body goes here" 
                   onChange={this.handleChange} />
 
-                  <Label  className="mt-3">Email Subject</Label>
+                  <Label  >Email Subject</Label>
                   <Input type="text" name="subject" placeholder="Email message body goes here" 
                   onChange={this.handleChange} />
     

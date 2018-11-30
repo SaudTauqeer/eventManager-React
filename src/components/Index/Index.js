@@ -9,8 +9,8 @@ import Footer from "./Footer";
 
 const Index = () => (
 <div>
-<Header />
 <NavBar />
+<Header />
 <Content />
 <Footer />  
 </div>
