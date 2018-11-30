@@ -1,7 +1,6 @@
 import React from "react";
 import FontAwesome from 'react-fontawesome';
-
-const Content = ()=> (
+ const Content = ()=> (
   <div>
     <section className="download bg-primary text-center" id="tagline">
     <div className="container">
@@ -22,7 +21,7 @@ const Content = ()=> (
       <div className="row">
         <div className="col-lg-4 my-auto">
                 <div className="screen">
-                  <img src={require("../images/2.jpg")} className="img-fluid" alt="pen with calendar" />
+                  <img src={require("../images/calendarWithPen.jpg")} className="img-fluid" alt="pen with calendar" />
                 </div>
                 <div className="button">
           </div>
@@ -66,8 +65,17 @@ const Content = ()=> (
       </div>
     </div>
   </section>
-  
-  <section className="contact bg-primary" id="contact">
+  <section className="cta">
+        <div className="cta-content">
+          <div className="container">
+            <h2>Stop forgetting.<br />Start managing.</h2>
+            <a href="#contact" className="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+          </div>
+        </div>
+        <div className="overlay" />
+      </section>
+      
+      <section className="contact bg-primary" id="contact">
         <div className="container">
           <h2>Contact the developer.
           I <FontAwesome name="heart" size="lg"/>
@@ -103,6 +111,4 @@ const Content = ()=> (
       </section>
       </div>
 );
-
-
-export default Content;
+ export default Content; 

@@ -8,7 +8,6 @@ import {
 
 // Import Components
 import Index from "../components/Index/Index";
-import Login from "../components/Login/Index";
 import About from "../components/About/Index";
 import EventCreater from "../components/CreateEvent/Index";
 import NoMatch from "../components/NoMatch";
