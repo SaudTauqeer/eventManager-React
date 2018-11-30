@@ -26,7 +26,7 @@ import {
     render() {
       return (
         <div>
-          <Navbar  className="navbar-fluid " color="info" light expand="md">
+          <Navbar  className="#mainNav " color="info" light expand="md">
           <Container>
             <NavbarBrand className ="text-white"> Event Manager </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
