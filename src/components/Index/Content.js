@@ -16,6 +16,7 @@ import FontAwesome from 'react-fontawesome';
     <div className="container">
       <div className="section-heading text-center">
         <h2>What can you do with event manager?</h2>
+        <h3> It's so simple ! </h3>
         <hr />
       </div>
       <div className="row">
@@ -32,15 +33,15 @@ import FontAwesome from 'react-fontawesome';
               <div className="col-lg-6">
                 <div className="feature-item">
                 <i className="fab fa-sticker-mule" />
-                  <h3>Device Mockups</h3>
-                  <p className="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                  <h3>Make it</h3>
+                  <p className="text-muted">Simply prepare your card with images according to event.</p>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="feature-item">
                   <i className="icon-camera text-primary" />
-                  <h3>Flexible Use</h3>
-                  <p className="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                  <h3>Add it</h3>
+                  <p className="text-muted"> Add a well-wishing message in an email text. </p>
                 </div>
               </div>
             </div>
@@ -48,15 +49,15 @@ import FontAwesome from 'react-fontawesome';
               <div className="col-lg-6">
                 <div className="feature-item">
                   <i className="icon-present text-primary" />
-                  <h3>Free to Use</h3>
-                  <p className="text-muted">As always, this theme is free to download and use for any purpose!</p>
+                  <h3>Save it</h3>
+                  <p className="text-muted">Save your event messages with your selected images with specific date and time.</p>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="feature-item">
                   <i className="icon-lock-open text-primary" />
-                  <h3>Open Source</h3>
-                  <p className="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+                  <h3>Send it</h3>
+                  <p className="text-muted">Saved events will be delivered automatically at scheduled time via E-mail. </p>
                 </div>
               </div>
             </div>
@@ -74,7 +75,7 @@ import FontAwesome from 'react-fontawesome';
         </div>
         <div className="overlay" />
       </section>
-      
+
       <section className="contact bg-primary" id="contact">
         <div className="container">
           <h2>Contact the developer.

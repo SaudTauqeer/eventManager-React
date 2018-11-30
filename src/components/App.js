@@ -8,7 +8,6 @@ import {
 
 // Import Components
 import Index from "../components/Index/Index";
-import About from "../components/About/Index";
 import EventCreater from "../components/CreateEvent/Index";
 import NoMatch from "../components/NoMatch";
 import Events from "../components/Events/Index";
@@ -18,7 +17,6 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Index} />
-      <Route exact path="/about" component={About} />
       <Route exact path="/create" component={EventCreater} />
       <Route exact path ="/events" component={Events} />
       <Route component={NoMatch}/>           
