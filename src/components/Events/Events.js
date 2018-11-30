@@ -91,8 +91,8 @@ class Events extends Component {
         ];
         
         return (
-
-            <ReactTable
+        <div className="container-fluid pt-5">
+            <ReactTable className="pt-5"
             columns={columns}
             data={this.state.data}
             filterable
@@ -100,6 +100,8 @@ class Events extends Component {
             >
             
             </ReactTable>
+        </div>
+
         );
     }
 }

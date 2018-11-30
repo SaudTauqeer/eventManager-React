@@ -56,9 +56,16 @@ export default class NavBar extends React.Component {
               <Date />
               </NavItem>
 
+                <NavItem className="navbar-brand">
+              <Button className=" text-white btn btn-info" href="/events"> Saved events</Button>
+              </NavItem>
+
+                <NavItem className="navbar-brand">
+              <a className=" text-white btn btn-outline-success"  target="blank" href="https://ajax-calls.netlify.com/"> Image fetcher</a>
+              </NavItem>
 
               <NavItem className="navbar-brand">
-              <Button className=" text-white btn btn-lg btn-danger" href={logoutRoute}>Log Out</Button>
+              <Button className=" text-white btn btn-danger" href={logoutRoute}>Log Out</Button>
               </NavItem>
 
 

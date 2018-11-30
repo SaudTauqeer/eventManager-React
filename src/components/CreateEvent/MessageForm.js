@@ -38,18 +38,13 @@ class EventInputData extends Component {
     };
     
     axios.post(postEventDataUrl, {data: this.state}  ,config)
-      .then(res => console.log('axios', res))
-      .catch(err => console.log('axios', err));
+    .then(window.location.reload())
+    .catch(err => console.log(err));
   }
 
 
 
   render(){
-        if (this.state.error === true) 
-      { return <Redirect to="/create" /> }
-        else if (this.state.redirect === true) {
-          return <Redirect to="/events" />
-        }
          return (
           <div>
           <Container className=" registerForm pt-5">

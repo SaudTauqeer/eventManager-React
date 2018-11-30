@@ -1,21 +1,19 @@
 import React from "react";
-import {NavLink, Navbar, Container, } from "reactstrap";
-import "./events.css";
 
-const Footer = ()=> (
-    
-        <div>
-          <Navbar  className="navbar-fluid events" color="info" light expand="md">
-          <Container>
-                <NavLink className=" text-dark" target= "blank" href="https://saud-resume.netlify.com"> Meet the developer </NavLink>
-                <NavLink className="text-dark"  href="/about"> About event manager </NavLink>
-
-            </Container>
-          </Navbar>
-        </div>
-    
+const Footer =()=> (
+  <div>
+    <footer>
+    <div className="container">
+      <p>© Event Manager 2018. All Rights Reserved.</p>
+      <ul className="list-inline">
+        <li className="list-inline-item">
+          <a target="blank" href="https://saud-resume.netlify.com/">My Portfolio</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  </div>
 );
-
 
 
 export default Footer;
