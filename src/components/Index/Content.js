@@ -88,6 +88,16 @@ const Content = ()=> (
               <FontAwesome name="google" size="1x"/>
               </a>
             </li>
+            <li className="list-inline-item social-resume">
+              <a target="blank" href="https://saud-resume.netlify.com">
+              <FontAwesome name="male" size="1x"/>
+              </a>
+            </li>
+            <li className="list-inline-item social-github">
+              <a target="blank" href="https://github.com/SaudTauqeer">
+              <FontAwesome name="github" size="1x"/>
+              </a>
+            </li>
           </ul>
         </div> 
       </section>

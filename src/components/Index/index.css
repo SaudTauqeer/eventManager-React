@@ -377,6 +377,25 @@
      background-color: #d73925
  }
  
+ section.contact ul.list-social li.social-resume a {
+    background-color: #2c3764
+}
+
+section.contact ul.list-social li.social-resume a:hover {
+    background-color: #262e50
+}
+
+section.contact ul.list-social li.social-github a {
+    background-color: #24292e
+}
+
+section.contact ul.list-social li.social-github a:hover {
+    background-color: #16191b
+}
+
+
+
+
  footer {
      padding: 25px 0;
      text-align: center;
