@@ -19,7 +19,6 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Index} />
-      <Route exact path="/login" component={Login} />
       <Route exact path="/about" component={About} />
       <Route exact path="/create" component={EventCreater} />
       <Route exact path ="/events" component={Events} />
