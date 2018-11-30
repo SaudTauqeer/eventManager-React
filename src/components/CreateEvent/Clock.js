@@ -8,12 +8,12 @@ class Clock extends Component {
 
 
     componentWillMount(){
-        setInterval(this.fetchTime, 10000);
+        setInterval(this.fetchTime, 2000);
     }
 
-    
+    	
     state={
-        fetchUrl: `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=Asia/Karachi`,
+        fetchUrl: `http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=Asia/Karachi`,
         h: null,
         m: null,
         isTimeLoaded: false,
@@ -45,19 +45,11 @@ class Clock extends Component {
 
     render() {
         return (
-            <div>
-            <Container className="text-center text-white mt-3">
-                <Row>
-                <Col>
-                
-                <p className="text-white display-4 mb-5">
+            
+                <div>
                 {(this.state.isTimeLoaded) ? `Current time is  ${this.state.h} : ${this.state.m}`: "Time is Loading..." }
-                </p>
-                </Col>
-                </Row>
-                
-            </Container>
-            </div>
+                </div>
+            
         );
     }
 }

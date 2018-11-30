@@ -7,11 +7,11 @@ let apiKey = process.env.REACT_APP_TIME_API_KEY;
 class Date extends Component {
     
     componentWillMount(){
-        setInterval(this.fetchDate, 10000);
+        setInterval(this.fetchDate, 2000);
     }
     
     state={
-        fetchUrl:`http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=Asia/Karachi`,
+        fetchUrl:`http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=Asia/Karachi`,
         year: null,
         month: null,
         day: null,
@@ -39,15 +39,8 @@ class Date extends Component {
     render(){
         return (
             <div>
-            <Container className="text-white text-center">
-            <Row>
-                <Col>
-                <p className="mb-5">
-                <b> {(this.state.isDateLoaded) ? `Date is  ${this.state.year} / ${this.state.month} / ${this.state.day}` : "Date is loading..." }</b>
-                </p>
-                </Col>
-            </Row>
-            </Container>
+             {(this.state.isDateLoaded) ? `Date is  ${this.state.year} / ${this.state.month} / ${this.state.day}` : "Date is loading..." }
+
             </div>
             
         );
