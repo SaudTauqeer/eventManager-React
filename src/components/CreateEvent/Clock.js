@@ -47,7 +47,7 @@ class Clock extends Component {
         return (
             
                 <div>
-                {(this.state.isTimeLoaded) ? `Current time is  ${this.state.h} : ${this.state.m}`: "Time is Loading..." }
+                {(this.state.isTimeLoaded) ? ` Time: ${this.state.h} : ${this.state.m}`: "Time is Loading..." }
                 </div>
             
         );

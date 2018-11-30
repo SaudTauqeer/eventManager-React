@@ -11,6 +11,7 @@ import Index from "../components/Index/Index";
 import EventCreater from "../components/CreateEvent/Index";
 import NoMatch from "../components/NoMatch";
 import Events from "../components/Events/Index";
+import TimeZone from "../components/TimeZone/Index";
 
 require('dotenv').config();
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
       <Route exact path="/" component={Index} />
       <Route exact path="/create" component={EventCreater} />
       <Route exact path ="/events" component={Events} />
+      <Route exact path ="/timezone" component={TimeZone} />
       <Route component={NoMatch}/>           
     </Switch>
 </BrowserRouter>

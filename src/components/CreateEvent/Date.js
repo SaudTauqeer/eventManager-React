@@ -39,7 +39,7 @@ class Date extends Component {
     render(){
         return (
             <div>
-             {(this.state.isDateLoaded) ? `Date is  ${this.state.year} / ${this.state.month} / ${this.state.day}` : "Date is loading..." }
+             {(this.state.isDateLoaded) ? `Date: ${this.state.year} / ${this.state.month} / ${this.state.day}` : "Date is loading..." }
 
             </div>
             
