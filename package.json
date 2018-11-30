@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@sendgrid/client": "^6.3.0",
     "@sendgrid/mail": "^6.3.1",
     "axios": "^0.18.0",
@@ -13,6 +14,7 @@
     "mailgun-js": "^0.22.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-table": "^6.8.6",

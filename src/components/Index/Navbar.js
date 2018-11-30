@@ -18,9 +18,9 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div >
         <Navbar className= "navbar navbar-expand-lg bg-dark fixed-top" dark id="mainNav">
-          <NavbarBrand href="/" className="mr-auto navbar-brand ">reactstrap</NavbarBrand>
+          <NavbarBrand className="mr-auto navbar-brand">Event Manager  </NavbarBrand>
           <NavbarToggler className="navbar-toggler navbar-toggler-right" onClick={this.toggleNavbar} className="mr-2" />
           <Collapse  isOpen={!this.state.collapsed} id="navbarResponsive" navbar>
             <Nav navbar className="navbar-nav ml-auto">

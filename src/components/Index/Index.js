@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-
+import FontAwesome from 'react-fontawesome';
 //import Components
 
 import NavBar from "./Navbar";
@@ -8,13 +8,14 @@ const Index = (props) => (
 
   <div>
   <NavBar />
+  
   <header className="masthead">
     <div className="container h-100">
       <div className="row h-100">
         <div className="col-lg-7 my-auto">
           <div className="header-content mx-auto">
             <h1 className="mb-5">Event Manager is a web based App. It helps you manage events easily.</h1>
-            <a href="#download" className="btn btn-outline btn-xl ">Start Now for Free!</a>
+            <a href="#tagline" className="btn btn-outline btn-xl ">Start Now for Free!</a>
           </div>
         </div>
         <div className="col-lg-5 my-auto">
@@ -31,7 +32,7 @@ const Index = (props) => (
           </div>
         </div>
   </header>
-  <section className="download bg-primary text-center" id="download">
+  <section className="download bg-primary text-center" id="tagline">
     <div className="container">
       <div className="row">
         <div className="col-md-8 mx-auto">
@@ -68,7 +69,7 @@ const Index = (props) => (
             <div className="row">
               <div className="col-lg-6">
                 <div className="feature-item">
-                  <i className="icon-screen-smartphone text-primary" />
+                <FontAwesome className="mb-3" name="linkedin" size="2x"/>
                   <h3>Device Mockups</h3>
                   <p className="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
                 </div>
@@ -105,7 +106,7 @@ const Index = (props) => (
   <section className="cta">
     <div className="cta-content">
       <div className="container">
-        <h2>Stop waiting.<br />Start building.</h2>
+        <h2>Stop forgetting.<br />Start managing.</h2>
         <a href="#contact" className="btn btn-outline btn-xl ">Let's Get Started!</a>
       </div>
     </div>
