@@ -2,16 +2,14 @@ import React from "react";
 import "./timeZone.css";
 
 //import Components
-import Header from "./Header";
+import Form from "./Form";
 
 import NavBar from "./Navbar";
-import Footer from "./Footer";
 
 const Index = () => (
 <div>
 <NavBar />
-<Header />
-<Footer />  
+<Form /> 
 </div>
 );
 

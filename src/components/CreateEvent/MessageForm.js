@@ -6,16 +6,16 @@ const postEventDataUrl = "http://localhost:3001/api/event";
 class EventInputData extends Component {
 
   state={
-    event : "",
-    sendingHour : "",
-    sendingMinutes: "",
-    cardUrl: "",
-    date: "",
-    text: "",
-    subject: "",
-    to: "",
-    from : "",
-    html: "",
+    event : null,
+    sendingHour : null,
+    sendingMinutes: null,
+    cardUrl: null,
+    date: null,
+    text: null,
+    subject: null,
+    to: null,
+    from : null,
+    html: null,
     error: false,
     redirect: false
   }
