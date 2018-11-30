@@ -1,26 +1,14 @@
 import React from "react";
-import {Container} from "reactstrap";
+import Arrow from "react-svg-arrow";
 
 //import components
-import Clock from "./Clock";
-import Date from "./Date";
-import MessageForm from "./MessageForm";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-
+import Header from "./Header";
+import NavBar from "./Navbar";
 const Index = () =>(
    <div>
-   <Navbar />
-   <Clock />
-    <Container>
-        <h1 className="text-white "> Schedule your event message. </h1>
-    </Container>
-    <Date />
-    <MessageForm />
-
-
-    <Footer />
+    <Header />
     </div>
+    
 );
 
 

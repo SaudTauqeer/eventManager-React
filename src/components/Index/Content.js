@@ -2,17 +2,8 @@ import React from "react";
 import FontAwesome from 'react-fontawesome';
  const Content = ()=> (
   <div>
-    <section className="download bg-primary text-center" id="tagline">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-8 mx-auto">
-          <h2 className="section-heading">Ever forgot an Event?</h2>
-          <p>See below some key features that event manager includes</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section className="features" id="features">
+
+  <section className="features">
     <div className="container">
       <div className="section-heading text-center">
         <h2>What can you do with event manager?</h2>
@@ -70,13 +61,13 @@ import FontAwesome from 'react-fontawesome';
         <div className="cta-content">
           <div className="container">
             <h2>Stop forgetting.<br />Start managing.</h2>
-            <a href="#contact" className="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+            <a href="http://localhost:3001/auth/google" className="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
           </div>
         </div>
         <div className="overlay" />
       </section>
 
-      <section className="contact bg-primary" id="contact">
+      <section className="contact bg-primary" >
         <div className="container">
           <h2>Contact the developer.
           I <FontAwesome name="heart" size="lg"/>
