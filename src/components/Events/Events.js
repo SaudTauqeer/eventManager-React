@@ -28,13 +28,11 @@ class Events extends Component {
     }
     
     deleteEvent = (props) =>{
-       let id = props.original._id;
-         fetch(restApi + "/" + id, {
+         fetch(restApi + "/" + props.original._id, {
              method: "DELETE"
          })
          .then(window.location.reload())
          .catch(err => console.log("err:", err))
-        
     }
 
     render() {
