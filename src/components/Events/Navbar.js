@@ -2,8 +2,8 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,Button } from 'reactstrap';
 import axios from "axios";
-import Clock from "../CreateEvent/Clock";
-import Date from "../CreateEvent/Date";
+import Clock from "./Clock";
+import Date from "./Date";
 
 const logoutRoute = "http://localhost:3001/auth/logout";
 const currentUser =  "http://localhost:3001/api/user";

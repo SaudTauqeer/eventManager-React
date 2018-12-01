@@ -8,6 +8,7 @@ const postEventDataUrl = "http://localhost:3001/api/event";
 class EventInputData extends Component {
 
   state={
+    status: null,
     error: false,
     event : null,
     sendingHour : null,
@@ -39,8 +40,17 @@ class EventInputData extends Component {
         },
       };
       
+      redirect = () => {
+        if (this.state.status === 201) {
+        return  <Redirect push to="/events" />
+        }
+      };
+
+
       axios.post(postEventDataUrl, {data: this.state}  ,config)
-      .then( res => console.log(res) )
+      .then( res => this.setState({
+        status: res.status
+      }) )
       .catch(err => console.log(err));
     }
 
