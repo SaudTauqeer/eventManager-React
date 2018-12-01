@@ -2,11 +2,12 @@ import React, {Component} from "react";
 import {Container, Form, Row, Col, FormGroup, Label, Input,Button,  } from "reactstrap";
 import {Redirect} from "react-router-dom";
 const axios = require('axios');
-const postEventDataUrl = "http://localhost:3001/api/event";
+const postEventDataUrl = "http://localhost:3001/api/zone";
 class FormInput extends Component {
 
   state={
     timeZone : null,
+    status: null
   }
 
   handleChange = e => {
@@ -27,22 +28,26 @@ class FormInput extends Component {
     };
     
     axios.post(postEventDataUrl, {data: this.state}  ,config)
-    .then(window.location.reload())
+    .then(res => this.setState({
+      status : res.status
+    }))
     .catch(err => console.log(err));
   }
 
 
 
   render(){
+      if (this.state.status === 201){
+        return <Redirect push to="/create" />
+      }
          return (
-
           <header className="masthead">
           <div className="container h-100">
             <div className="row h-100">
               <div className="col-lg-7 my-auto">
                 <div className="header-content mx-auto">
 
-                          <Container className=" registerForm pt-5">
+          <Container className=" registerForm pt-5">
           <Form className="text-white">
             <Row form>
               <Col lg={6}>
