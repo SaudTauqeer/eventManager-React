@@ -71,38 +71,38 @@ class EventInputData extends Component {
             <Row form>
               <Col lg={10}>
                 <FormGroup className="pt-5">
-                  <Label >Event Name</Label>
+                  <Label >Event Name - Required</Label>
                   <Input type="text" name="event" placeholder="Enter Event name." onChange={this.handleChange} />
     
-                  <Label> Date </Label>
+                  <Label> Date - Required </Label>
                   <Input type="text" name="date" placeholder=" Enter Date in this format yyyy/mm/dd" 
                   onChange={this.handleChange} />
     
-                  <Label >Sender </Label>
+                  <Label >Sender - Required </Label>
                   <Input type="text" name="from" placeholder="Email" 
                   onChange={this.handleChange} />
     
-                  <Label for="email" > Receiver </Label>
+                  <Label for="email"> Receiver - Required </Label>
                   <Input type="text" name="to" placeholder="person i want to send email" 
                   onChange={this.handleChange} />
             
-                  <Label  >Hour</Label>
+                  <Label  >Hour - Required</Label>
                   <Input type="text" name="sendingHour"  placeholder="Enter sending hour" 
                   onChange={this.handleChange} />
 
-                  <Label  >Minutes</Label>
+                  <Label  >Minutes - Required</Label>
                   <Input type="text" name="sendingMinutes" placeholder="Enter Sending minutes" 
                   onChange={this.handleChange} />
 
-                  <Label  >Image Url</Label>
+                  <Label  >Image Url - Optional </Label>
                   <Input type="text" name="cardUrl" placeholder="Event related image - use image fetcher from navbar" 
                   onChange={this.handleChange} />
 
-                  <Label  >Enter Message body</Label>
+                  <Label  >Enter Message body - Required</Label>
                   <Input type="textarea" name="text" placeholder="Email message body goes here" 
                   onChange={this.handleChange} />
 
-                  <Label  >Email Subject</Label>
+                  <Label  >Email Subject - Required</Label>
                   <Input type="text" name="subject" placeholder="Email message body goes here" 
                   onChange={this.handleChange} />
     

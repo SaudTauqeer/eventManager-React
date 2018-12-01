@@ -70,7 +70,7 @@ import FontAwesome from 'react-fontawesome';
       <section className="contact bg-primary" >
         <div className="container">
           <h2>Contact the developer.
-          I <FontAwesome name="heart" size="lg"/>
+              I <FontAwesome name="heart" size="lg"/>
             {" "} new friends!</h2>
           <ul className="list-inline list-social">
             <li className="list-inline-item social-twitter">

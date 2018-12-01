@@ -2,8 +2,7 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,Button } from 'reactstrap';
 import axios from "axios";
-import Clock from "./Clock";
-import Date from "./Date";
+
 
 const logoutRoute = "http://localhost:3001/auth/logout";
 const currentUser =  "http://localhost:3001/api/user";
@@ -44,24 +43,8 @@ export default class NavBar extends React.Component {
           <Collapse  isOpen={!this.state.collapsed} id="navbarResponsive" navbar>
             <Nav navbar className="navbar-nav ml-auto">
 
-            <NavItem className="navbar-brand text-white">
+              <NavItem className="navbar-brand text-white">
                { (this.state.currentUser !== null || undefined) ?  `Welcome, ${this.state.currentUser}` : `Loading..` }
-              </NavItem>
-
-              <NavItem className="navbar-brand">
-              <Clock />
-              </NavItem>
-
-              <NavItem className="navbar-brand">
-              <Date />
-              </NavItem>
-
-                <NavItem className="navbar-brand">
-              <Button className=" text-white btn btn-info" href="/events"> Saved events</Button>
-              </NavItem>
-
-                <NavItem className="navbar-brand">
-              <a className=" text-white btn btn-outline-success"  target="blank" href="https://ajax-calls.netlify.com/"> Image fetcher</a>
               </NavItem>
 
               <NavItem className="navbar-brand">
