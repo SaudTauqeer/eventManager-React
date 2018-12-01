@@ -1,11 +1,14 @@
 import React, {Component} from "react";
 import {Container, Form, Row, Col, FormGroup, Label, Input,Button,  } from "reactstrap";
 import {Redirect} from "react-router-dom";
+import Alert from "./Alert";
+
 const axios = require('axios');
 const postEventDataUrl = "http://localhost:3001/api/event";
 class EventInputData extends Component {
 
   state={
+    error: false,
     event : null,
     sendingHour : null,
     sendingMinutes: null,
@@ -15,8 +18,6 @@ class EventInputData extends Component {
     subject: null,
     to: null,
     from : null,
-    html: null,
-    error: false,
     redirect: false
   }
 
@@ -29,25 +30,36 @@ class EventInputData extends Component {
 
 
   onSubmit = e => {
-    e.preventDefault();
-    const config = {
-      withCredentials: true,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-    
-    axios.post(postEventDataUrl, {data: this.state}  ,config)
-    .then(window.location.reload())
-    .catch(err => console.log(err));
-  }
+  
+    if (!this.state.error) {
+      const config = {
+        withCredentials: true,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      };
+      
+      axios.post(postEventDataUrl, {data: this.state}  ,config)
+      .then( res => console.log(res) )
+      .catch(err => console.log(err));
+    }
+
+    }
+
+     AlertPopUp = () => {
+      if (this.state.error === true) {
+        return  (<Alert />);
+      }
+    }
 
 
 
   render(){
+
          return (
           <div>
           <Container className=" registerForm pt-5">
+           {this.AlertPopUp()}
           <Form className="text-white">
             <Row form>
               <Col lg={10}>

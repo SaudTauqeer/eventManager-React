@@ -2,7 +2,6 @@
 import React, {Component} from "react";
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
-
 const restApi = "http://localhost:3001/api/event";
 
 
@@ -37,53 +36,52 @@ class Events extends Component {
     render() {
         const columns = [
             {
+                Header: "Date",
+                accessor: "date"
+            },
+
+            {   
                 Header: "Event Name",
                 accessor: "event",
-                textAlign: "center"
-            },
-            {
-                Header: "Sending Hour",
-                accessor: "sendingHour"
-            },
-            {
-                Header: "Sending Minutes",
-                accessor: "sendingMinutes"
-            },
-            {
-                Header: "Image URL",
-                accessor: "cardUrl"
-            },
-            {
-                Header: "Sending Date",
-                accessor: "date"
+                textAlign: "center",
+                width: 250
             },
             {
                 Header: "Message",
                 accessor: "text"
             },
             {
-                Header: "Email Subject",
+                Header: "Image URL",
+                accessor: "cardUrl"
+            },
+            {
+                Header: "Hour",
+                accessor: "sendingHour",
+                width: 100
+            },
+            {
+                Header: "Minutes",
+                accessor: "sendingMinutes",
+                width: 100
+            },
+            {
+                Header: "Subject",
                 accessor: "subject"
             },
             {
-                Header: "Receiver/Receiver email",
+                Header: "Receiver email",
                 accessor: "to"
             },
             {
-                Header: "Sender/Sender email",
+                Header: "Sender email",
                 accessor: "from"
-            },
-            {
-                Header: "Html",
-                filterable: false,
-                accessor: "html"
             },
             {
                 Header: "Actions",
                 filterable: false,
                 Cell: props => {
                     return (
-                        <button className="btn btn-danger" onClick={()=> this.deleteEvent(props) }>Delete</button>
+                        <button className="btn btn-sm btn-danger" onClick={()=> this.deleteEvent(props) }>Delete</button>
                     );
                     
                 }
@@ -91,7 +89,7 @@ class Events extends Component {
         ];
         
         return (
-        <div className="container-fluid pt-5">
+        <div className="container-fluid pt-5  text-dark lead  text-center ">
             <ReactTable className="pt-5"
             columns={columns}
             data={this.state.data}
