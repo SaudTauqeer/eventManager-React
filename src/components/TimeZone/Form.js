@@ -47,7 +47,7 @@ class FormInput extends Component {
             <Row form>
               <Col lg={6}>
                 <FormGroup className="pt-5">
-                  <Label >Time Zone</Label>
+                  <Label className="lead">Time Zone</Label>
                   <Input type="text" name="timeZone" placeholder="i.e: Europe/Mariehamn"  onChange={this.handleChange} />
                 </FormGroup>
                 <Button className="btn btn-md btn-primary mb-4" onClick={this.onSubmit} >Submit</Button>
