@@ -6,6 +6,7 @@ let apiKey = process.env.REACT_APP_TIME_API_KEY;
 
 class Date extends Component {
     
+    
     componentWillMount(){
       var intervalId =  setInterval(this.fetchDate, 2000);
       this.setState({intervalId: intervalId});
