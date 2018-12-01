@@ -8,9 +8,15 @@ class Clock extends Component {
 
 
     componentWillMount(){
-        setInterval(this.fetchTime, 2000);
+      var intervalId =  setInterval(this.fetchTime, 2000);
+
+        //store interval id in state for cleanup
+        this.setState({intervalId: intervalId});
     }
 
+    componentWillUnmount () {
+        clearInterval(this.state.intervalId);
+    }
     	
     state={
         fetchUrl: `http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=Asia/Karachi`,
@@ -18,7 +24,8 @@ class Clock extends Component {
         m: null,
         isTimeLoaded: false,
         executeTimeHour: this.executeTimeHour,
-        executeTimeMinutes:this.executeTimeMinutes
+        executeTimeMinutes:this.executeTimeMinutes,
+        intervalId: null
 
     }
 

@@ -7,15 +7,20 @@ let apiKey = process.env.REACT_APP_TIME_API_KEY;
 class Date extends Component {
     
     componentWillMount(){
-        setInterval(this.fetchDate, 2000);
+      var intervalId =  setInterval(this.fetchDate, 2000);
+      this.setState({intervalId: intervalId});
     }
-    
+
+    componentWillUnmount () {
+        clearInterval(this.state.intervalId);
+    }    
     state={
         fetchUrl:`http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=Asia/Karachi`,
         year: null,
         month: null,
         day: null,
-        isDateLoaded: false
+        isDateLoaded: false,
+        intervalId : null
     }
 
         fetchDate = ()=> {

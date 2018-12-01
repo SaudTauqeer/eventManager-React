@@ -40,11 +40,6 @@ class EventInputData extends Component {
         },
       };
       
-      redirect = () => {
-        if (this.state.status === 201) {
-        return  <Redirect push to="/events" />
-        }
-      };
 
 
       axios.post(postEventDataUrl, {data: this.state}  ,config)
@@ -65,7 +60,9 @@ class EventInputData extends Component {
 
 
   render(){
-
+    if (this.state.status === 201) {
+      return  <Redirect push to="/events" />
+      }
          return (
           <div>
           <Container className=" registerForm pt-5">
