@@ -23,7 +23,7 @@ export default class NavBar extends React.Component {
   componentDidMount() {
     axios.get(currentUser)
     .then(data => this.setState({
-      currentUser: data.data,
+      currentUser: data.data.username,
     }))
 }
 

@@ -3,10 +3,12 @@ import {Container, Form, Row, Col, FormGroup, Label, Input,Button,  } from "reac
 import {Redirect} from "react-router-dom";
 const axios = require('axios');
 const postEventDataUrl = "http://localhost:3001/api/zone";
+const userDataUrl = "http://localhost:3001/api/user";
+
 class FormInput extends Component {
 
   state={
-    timeZone : null,
+    timeZoneLength : null,
     status: null
   }
 
@@ -16,7 +18,14 @@ class FormInput extends Component {
     });
   };
 
-
+   componentWillMount () {
+       axios.get(userDataUrl)
+       .then(data => data.data.userZone.length)
+       .then (timeZoneLength => this.setState({
+          timeZoneLength: timeZoneLength
+       }));
+       
+   }
 
   onSubmit = e => {
     e.preventDefault();
@@ -37,6 +46,7 @@ class FormInput extends Component {
 
 
   render(){
+        // first time user redirected to create event page after 201 code.
       if (this.state.status === 201){
         return <Redirect push to="/create" />
       }

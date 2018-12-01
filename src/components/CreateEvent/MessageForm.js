@@ -29,9 +29,9 @@ class EventInputData extends Component {
   };
 
 
-
   onSubmit = e => {
-  
+    e.preventDefault();
+    //set error to true if bad request
     if (!this.state.error) {
       const config = {
         withCredentials: true,
@@ -40,13 +40,17 @@ class EventInputData extends Component {
         },
       };
       
-
-
       axios.post(postEventDataUrl, {data: this.state}  ,config)
       .then( res => this.setState({
         status: res.status
-      }) )
+      }))
       .catch(err => console.log(err));
+    }
+
+    if (this.state.status !== 201) {
+      this.setState({
+        error: true
+      });
     }
 
     }
@@ -60,6 +64,7 @@ class EventInputData extends Component {
 
 
   render(){
+      // if correct form data then redirect.
     if (this.state.status === 201) {
       return  <Redirect push to="/events" />
       }
