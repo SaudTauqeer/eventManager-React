@@ -7,9 +7,9 @@ let apiKey = process.env.REACT_APP_TIME_API_KEY;
 class Clock extends Component {
 
 
+    
     componentWillMount(){
       var intervalId =  setInterval(this.fetchTime, 2000);
-
         //store interval id in state for cleanup
         this.setState({intervalId: intervalId});
     }
