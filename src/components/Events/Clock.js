@@ -59,7 +59,7 @@ class Clock extends Component {
         })};
 
 
-    render() {
+     render() {
         return (
             
                 <div>
