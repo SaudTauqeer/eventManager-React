@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import NavBar from "./Navbar";
 
 const Index = () => (
+    
 <div>
 <NavBar />
 <Form /> 

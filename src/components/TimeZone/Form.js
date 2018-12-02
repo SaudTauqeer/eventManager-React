@@ -9,7 +9,8 @@ class FormInput extends Component {
 
   state={
     timeZoneLength : null,
-    status: null
+    status: null,
+    isActivated: false
   }
 
   handleChange = e => {
@@ -22,7 +23,8 @@ class FormInput extends Component {
        axios.get(userDataUrl)
        .then(data => data.data.userZone.length)
        .then (timeZoneLength => this.setState({
-          timeZoneLength: timeZoneLength
+          timeZoneLength: timeZoneLength,
+          isActivated: true
        }));
        
    }
@@ -38,7 +40,7 @@ class FormInput extends Component {
     
     axios.post(postEventDataUrl, {data: this.state}  ,config)
     .then(res => this.setState({
-      status : res.status
+      status : res.status,
     }))
     .catch(err => console.log(err));
   }
@@ -49,6 +51,9 @@ class FormInput extends Component {
         // first time user redirected to create event page after 201 code.
       if (this.state.status === 201){
         return <Redirect push to="/create" />
+      }
+      if (this.state.isActivated && this.state.timeZoneLength !==0 ) {
+        return <Redirect push to="create" />
       }
          return (
           <header className="masthead">
