@@ -12,8 +12,11 @@ export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
+    this._source = axios.CancelToken.source();
     this.toggleNavbar = this.toggleNavbar.bind(this);
+
     this.state = {
+      isMounted: false,
       collapsed: true,
       currentUser: null,
       loaded: false
@@ -21,21 +24,31 @@ export default class NavBar extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(currentUser)
-    .then(data => this.setState({
-      currentUser: data.data.username,
-    }))
+    this.setState({ isMounted: true });
+        axios.get( currentUser , { cancelToken: this._source.token })
+        .then((response) => {
+            if ( this.state.isMounted ) {
+                this.setState( { currentUser: response.data.username } );
+            }
+        })
+        .catch(err => console.log(err));
+
+
+  }
+  //cancelling all axios calls with axios token.
+  componentWillUnmount() {
+    this._source.cancel( 'Operation canceled due component being unmounted.' )
 }
 
 
   toggleNavbar() {
+    if (this.state.isMounted) {
     this.setState({
       collapsed: !this.state.collapsed
     });
   }
+}
   render() {
-
-
     return (
       <div >
         <Navbar className= "navbar navbar-expand-lg bg-dark fixed-top" dark id="mainNav">

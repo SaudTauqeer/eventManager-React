@@ -6,21 +6,32 @@ import Alert from "./Alert";
 const axios = require('axios');
 const postEventDataUrl = "http://localhost:3001/api/event";
 class EventInputData extends Component {
+  constructor(props) {
+    super(props);
 
-  state={
-    status: null,
-    error: false,
-    event : null,
-    sendingHour : null,
-    sendingMinutes: null,
-    cardUrl: null,
-    date: null,
-    text: null,
-    subject: null,
-    to: null,
-    from : null,
-    redirect: false
+    this._source = axios.CancelToken.source();
+
+    this.state = {
+      isMounted: false,
+      status: null,
+      error: false,
+      event : null,
+      sendingHour : null,
+      sendingMinutes: null,
+      cardUrl: null,
+      date: null,
+      text: null,
+      subject: null,
+      to: null,
+      from : null,
+      redirect: false
+    };
   }
+
+  componentDidMount() {
+    this.setState({ isMounted: true });
+      }
+
 
   handleChange = e => {
     this.setState({
@@ -40,20 +51,25 @@ class EventInputData extends Component {
         },
       };
       
-      axios.post(postEventDataUrl, {data: this.state}  ,config)
-      .then( res => this.setState({
-        status: res.status
-      }))
+      
+      axios.post(postEventDataUrl,{data: this.state}  ,config)
+      .then( res => {
+        if (this.state.isMounted)  {
+          this.setState({
+            status: res.status
+          }); 
+        }
+        })
       .catch(err => console.log(err));
     }
 
     if (this.state.status !== 201) {
-      this.setState({
-        error: true
-      });
-    }
-
-    }
+      if (this.state.isMounted) {
+        this.setState({
+          error: true
+        });
+      }}
+  }
 
      AlertPopUp = () => {
       if (this.state.error === true) {
