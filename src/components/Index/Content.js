@@ -23,14 +23,14 @@ import FontAwesome from 'react-fontawesome';
             <div className="row">
               <div className="col-lg-6">
                 <div className="feature-item">
-                <i className="fab fa-sticker-mule" />
+                <FontAwesome className="mb-3" name="check-square" size="4x"/>
                   <h3>Make it</h3>
                   <p className="text-muted">Simply prepare your card with images according to event.</p>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="feature-item">
-                  <i className="icon-camera text-primary" />
+                <FontAwesome className="mb-3" name="address-card" size="4x"/>
                   <h3>Add it</h3>
                   <p className="text-muted"> Add a well-wishing message in an email text. </p>
                 </div>
@@ -39,14 +39,14 @@ import FontAwesome from 'react-fontawesome';
             <div className="row">
               <div className="col-lg-6">
                 <div className="feature-item">
-                  <i className="icon-present text-primary" />
+                  <FontAwesome className="mb-3" name="save" size="4x"/>
                   <h3>Save it</h3>
                   <p className="text-muted">Save your event messages with your selected images with specific date and time.</p>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="feature-item">
-                  <i className="icon-lock-open text-primary" />
+                <FontAwesome className="mb-3" name="send" size="4x"/>
                   <h3>Send it</h3>
                   <p className="text-muted">Saved events will be delivered automatically at scheduled time via E-mail. </p>
                 </div>
