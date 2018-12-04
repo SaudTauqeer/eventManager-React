@@ -33,13 +33,27 @@ class Events extends Component {
          .catch(err => console.log("err:", err))
     }
 
+    sentStatus = (props) => {
+        console.log(props);
+    }
+
     render() {
         const columns = [
             {
-                Header: "Date",
-                accessor: "date"
+                Header: "Year",
+                accessor: "year",
+                width: 100
             },
-
+            {
+                Header: "Month",
+                accessor: "month",
+                width: 80
+            },
+            {
+                Header: "Day",
+                accessor: "day",
+                width: 80
+            },
             {   
                 Header: "Event Name",
                 accessor: "event",
@@ -78,6 +92,7 @@ class Events extends Component {
             },
             {
                 Header: "Actions",
+                width: 100,
                 filterable: false,
                 Cell: props => {
                     return (
@@ -85,6 +100,18 @@ class Events extends Component {
                     );
                     
                 }
+            },
+            {
+                Header: "Status",
+                width: 100,
+                filterable: false,
+                    Cell: props => {
+                        if (props.original.sent === true){
+                            return <span className="text-success"> Sent </span>
+                        }else if (props.original.sent === false){
+                            return <span className="text-danger"> Pending </span>
+                        }
+                    }
             }
         ];
         
