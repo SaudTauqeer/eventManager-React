@@ -74,7 +74,7 @@ export default class NavBar extends React.Component {
               </NavItem>
 
                 <NavItem className="navbar-brand">
-              <a className=" text-white btn btn-outline-success"  target="blank" href="https://ajax-calls.netlify.com/"> Image fetcher</a>
+              <a className=" text-white btn btn-outline-success"  target="blank" href="https://images.google.com"> Image fetcher</a>
               </NavItem>
 
               <NavItem className="navbar-brand">

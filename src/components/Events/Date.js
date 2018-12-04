@@ -26,7 +26,7 @@ class Date extends Component {
     componentDidMount(){
         this.setState({
             isMounted:true
-        })
+        });
         axios.get( currentUser , { cancelToken: this._source.token })
         .then(res => res.data)
         .then(data => data.userZone[0].timeZone)
@@ -34,16 +34,17 @@ class Date extends Component {
             if (this.state.isMounted){
             this.setState({
             fetchUrl:`http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`
-        })
+        });
+
+        
+      var intervalId =  setInterval(this.fetchDate, 2000);
+      this.setState({intervalId: intervalId});
         }
     })
-        if (this.state.isMounted) {
-            this.setState({intervalId: intervalId});
-            var intervalId =  setInterval(this.fetchDate, 2000);
-            
-        }
-      
+
     }
+
+
 
     
     componentWillUnmount () {

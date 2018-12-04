@@ -1,7 +1,6 @@
 //imoports
 import React, {Component,} from "react";
 import "isomorphic-fetch";
-import {Container, Row, Col} from "reactstrap";
 import axios from "axios";
 
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
@@ -59,7 +58,7 @@ class Clock extends Component {
         })};
 
 
-    render() {
+     render() {
         return (
             
                 <div>

@@ -15,16 +15,19 @@ class EventInputData extends Component {
       isMounted: false,
       status: null,
       error: false,
+      day: null,
+      month: null,
+      year: null,
       event : null,
       sendingHour : null,
       sendingMinutes: null,
       cardUrl: null,
-      date: null,
       text: null,
       subject: null,
       to: null,
       from : null,
-      redirect: false
+      redirect: false,
+      sent: false
     };
   }
 
@@ -95,10 +98,18 @@ class EventInputData extends Component {
                   <Label >Event Name - Required</Label>
                   <Input type="text" name="event" placeholder="Enter Event name." onChange={this.handleChange} />
     
-                  <Label> Date - Required </Label>
-                  <Input type="text" name="date" placeholder=" Enter Date in this format yyyy/mm/dd" 
+                  <Label> Year - Required </Label>
+                  <Input type="text" name="year" placeholder=" Enter Year:  YYYY" 
                   onChange={this.handleChange} />
-    
+
+                  <Label> Month - Required </Label>
+                  <Input type="text" name="month" placeholder=" Enter Month:  MM" 
+                  onChange={this.handleChange} />
+
+                  <Label> Day - Required </Label>
+                  <Input type="text" name="day" placeholder=" Enter Day:  DD" 
+                  onChange={this.handleChange} />
+
                   <Label >Sender - Required </Label>
                   <Input type="text" name="from" placeholder="Email" 
                   onChange={this.handleChange} />
@@ -108,7 +119,7 @@ class EventInputData extends Component {
                   onChange={this.handleChange} />
             
                   <Label  >Hour - Required</Label>
-                  <Input type="text" name="sendingHour"  placeholder="Enter sending hour" 
+                  <Input type="text" name="sendingHour"  placeholder="Enter sending hour - 24 hour format" 
                   onChange={this.handleChange} />
 
                   <Label  >Minutes - Required</Label>
