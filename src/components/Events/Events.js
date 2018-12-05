@@ -55,7 +55,7 @@ class Events extends Component {
                 width: 80
             },
             {   
-                Header: "Event Name",
+                Header: "Name",
                 accessor: "event",
                 textAlign: "center",
                 width: 250
