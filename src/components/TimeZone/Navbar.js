@@ -30,7 +30,8 @@ componentDidMount() {
       'Content-Type': 'application/json',
     },
   };
-    axios.get( currentUser , { cancelToken: this._source.token }, config)
+    fetch( currentUser , {credentials: 'include'})
+      .then(res => res.json())
         .then((response) => {
             if ( this.state.isMounted ) {
                 this.setState( { currentUser: response.data.username } );
