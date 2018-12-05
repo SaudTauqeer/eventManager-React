@@ -24,7 +24,13 @@ export default class NavBar extends React.Component {
 
 componentDidMount() {
   this.setState({ isMounted: true });
-    axios.get( currentUser , { cancelToken: this._source.token })
+  const config = {
+    credentials: "include",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+    axios.get( currentUser , { cancelToken: this._source.token }, config)
         .then((response) => {
             if ( this.state.isMounted ) {
                 this.setState( { currentUser: response.data.username } );
