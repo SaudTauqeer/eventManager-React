@@ -4,7 +4,7 @@ import "isomorphic-fetch";
 
 
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
-const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
+const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
 
 
 class Clock extends Component {

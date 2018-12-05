@@ -2,7 +2,7 @@
 import React, {Component} from "react";
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
-const restApi = "https://eventmanager-web-api.herokuapp.com/api/event";
+const restApi = "http://eventmanager-web-api.herokuapp.com/api/event";
 
 
 class Events extends Component {

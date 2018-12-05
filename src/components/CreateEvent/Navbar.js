@@ -4,8 +4,8 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,Button } fro
 import Clock from "./Clock";
 import Date from "./Date";
 
-const logoutRoute = "https://eventmanager-web-api.herokuapp.com/auth/logout";
-const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
+const logoutRoute = "http://eventmanager-web-api.herokuapp.com/auth/logout";
+const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -72,7 +72,7 @@ export default class NavBar extends React.Component {
               </NavItem>
 
               <NavItem className="navbar-brand">
-              <a className=" text-white btn btn-outline-success"  target="blank" href="https://images.google.com"> Image fetcher</a>
+              <a className=" text-white btn btn-outline-success"  target="blank" href="http://images.google.com"> Image fetcher</a>
               </NavItem>
 
               <NavItem className="navbar-brand">

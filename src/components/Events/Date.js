@@ -2,7 +2,7 @@
 import React, {Component} from "react";
 import "isomorphic-fetch";
 
-const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
+const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
 
 class Date extends Component {
