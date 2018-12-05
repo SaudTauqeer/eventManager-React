@@ -50,6 +50,7 @@ class EventInputData extends Component {
         method: 'POST', 
         body: (this.state), 
         headers:{
+          'Access-Control-Allow-Credentials': true,
           credentials: 'include'
         }})
       .then( res => {
