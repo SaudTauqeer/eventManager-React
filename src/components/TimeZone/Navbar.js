@@ -25,7 +25,7 @@ export default class NavBar extends React.Component {
 componentDidMount() {
   this.setState({ isMounted: true });
   const config = {
-    credentials: "include",
+    withCredentials: true,
     headers: {
       'Content-Type': 'application/json',
     },
