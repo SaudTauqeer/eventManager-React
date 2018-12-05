@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {Container, Form, Row, Col, FormGroup, Label, Input,Button,  } from "reactstrap";
 import {Redirect} from "react-router-dom";
-const axios = require('axios');
 const postEventDataUrl = "https://eventmanager-web-api.herokuapp.com/api/zone";
 const userDataUrl = "https://eventmanager-web-api.herokuapp.com/api/user";
 
@@ -20,8 +19,9 @@ class FormInput extends Component {
   };
 
    componentWillMount () {
-       axios.get(userDataUrl)
-       .then(data => data.data.userZone.length)
+       fetch(userDataUrl, {credentials: 'include'})
+       .then(res => res.json())
+       .then(userData => userData.userZone.length)
        .then (timeZoneLength => this.setState({
           timeZoneLength: timeZoneLength,
           isActivated: true
@@ -31,17 +31,15 @@ class FormInput extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const config = {
-      
-      withCredentials: true,
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    }
-    axios.post(postEventDataUrl, {data: this.state}  ,config)
-    .then(res => this.setState({
-      status : res.status,
-    }))
+    fetch(postEventDataUrl,{
+      method: 'POST', 
+      body: (this.state),
+      headers:{
+        credentials: 'include'
+      }})
+      .then(res => this.setState({
+        status : res.status,
+      }))
     .catch(err => console.log(err));
   }
 

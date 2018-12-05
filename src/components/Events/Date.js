@@ -1,7 +1,6 @@
 //imports
 import React, {Component} from "react";
 import "isomorphic-fetch";
-import axios from "axios";
 
 const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
@@ -9,8 +8,6 @@ let apiKey = process.env.REACT_APP_TIME_API_KEY;
 class Date extends Component {
     constructor(props) {
         super(props);
-    
-        this._source = axios.CancelToken.source();
     
         this.state = {
           isMounted: false,
@@ -27,8 +24,8 @@ class Date extends Component {
         this.setState({
             isMounted:true
         });
-        axios.get( currentUser , { cancelToken: this._source.token })
-        .then(res => res.data)
+        fetch( currentUser , {credentials: 'include'})
+        .then (res => res.json())
         .then(data => data.userZone[0].timeZone)
         .then( currentUserTimeZone => { 
             if (this.state.isMounted){
@@ -49,12 +46,12 @@ class Date extends Component {
     
     componentWillUnmount () {
         clearInterval(this.state.intervalId);
-        this._source.cancel( 'Operation canceled due component being unmounted.' );
+
     }    
 
         fetchDate = ()=> {
-        axios.get(this.state.fetchUrl)
-        .then(response => response.data)
+        fetch(this.state.fetchUrl)
+        .then(response => response.json())
         .then(data => data.formatted)
         .then(dateTime => {
             let year = dateTime.slice(0, 4);

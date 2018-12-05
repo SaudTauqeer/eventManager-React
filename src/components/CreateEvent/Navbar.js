@@ -1,7 +1,6 @@
 //imports
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,Button } from 'reactstrap';
-import axios from "axios";
 import Clock from "./Clock";
 import Date from "./Date";
 
@@ -12,7 +11,6 @@ export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
 
-    this._source = axios.CancelToken.source();
     this.toggleNavbar = this.toggleNavbar.bind(this);
 
     this.state = {
@@ -25,29 +23,29 @@ export default class NavBar extends React.Component {
 
   componentDidMount() {
     this.setState({ isMounted: true });
-        axios.get( currentUser , { cancelToken: this._source.token })
+    fetch( currentUser , {credentials: 'include'})
+      .then(response => response.json())
         .then((response) => {
             if ( this.state.isMounted ) {
-                this.setState( { currentUser: response.data.username } );
+                this.setState( { currentUser: response.username } );
             }
-        })
-        .catch(err => console.log(err));
-
-
+        } ).catch( err => {
+          console.log(err);
+    });
   }
-  //cancelling all axios calls with axios token.
+  
   componentWillUnmount() {
-    this._source.cancel( 'Operation canceled due component being unmounted.' )
+    this.setState({isMounted : false})
 }
 
 
   toggleNavbar() {
-    if (this.state.isMounted) {
+    if (this.state.isMounted){
     this.setState({
       collapsed: !this.state.collapsed
     });
   }
-}
+  }
   render() {
     return (
       <div >
@@ -57,8 +55,8 @@ export default class NavBar extends React.Component {
           <Collapse  isOpen={!this.state.collapsed} id="navbarResponsive" navbar>
             <Nav navbar className="navbar-nav ml-auto">
 
-            <NavItem className="navbar-brand text-white">
-               { (this.state.currentUser !== null || undefined) ?  `Welcome, ${this.state.currentUser}` : `Loading..` }
+              <NavItem className="navbar-brand text-white">
+              { (this.state.currentUser !== null || undefined) ?  `Welcome, ${this.state.currentUser}` : `Loading..` }
               </NavItem>
 
               <NavItem className="navbar-brand">
@@ -69,11 +67,11 @@ export default class NavBar extends React.Component {
               <Date />
               </NavItem>
 
-                <NavItem className="navbar-brand">
+              <NavItem className="navbar-brand">
               <Button className=" text-white btn btn-info" href="/events"> Saved events</Button>
               </NavItem>
 
-                <NavItem className="navbar-brand">
+              <NavItem className="navbar-brand">
               <a className=" text-white btn btn-outline-success"  target="blank" href="https://images.google.com"> Image fetcher</a>
               </NavItem>
 
@@ -89,3 +87,10 @@ export default class NavBar extends React.Component {
     );
   }
 }
+
+
+
+
+
+
+

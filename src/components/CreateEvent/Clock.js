@@ -1,7 +1,7 @@
 //imoports
 import React, {Component,} from "react";
 import "isomorphic-fetch";
-import axios from "axios";
+
 
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
 const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
@@ -10,8 +10,8 @@ const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
 class Clock extends Component {
 
     componentWillMount(){
-        axios.get(currentUser)
-        .then(res => res.data)
+        fetch(currentUser , {credentials: 'include'})
+        .then(response => response.json())
         .then(data => data.userZone[0].timeZone)
         .then( currentUserTimeZone => this.setState({
             fetchUrl:`http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`

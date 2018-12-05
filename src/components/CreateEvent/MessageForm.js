@@ -3,13 +3,12 @@ import {Container, Form, Row, Col, FormGroup, Label, Input,Button,  } from "reac
 import {Redirect} from "react-router-dom";
 import Alert from "./Alert";
 
-const axios = require('axios');
+
 const postEventDataUrl = "https://eventmanager-web-api.herokuapp.com/api/event";
 class EventInputData extends Component {
   constructor(props) {
     super(props);
 
-    this._source = axios.CancelToken.source();
 
     this.state = {
       isMounted: false,
@@ -44,18 +43,15 @@ class EventInputData extends Component {
 
 
   onSubmit = e => {
-    e.preventDefault();
-    //set error to true if bad request
+    e.preventDefault(); 
+    // fetch data if !err from API.
     if (!this.state.error) {
-      const config = {
-        withCredentials: true,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      };
-      
-      
-      axios.post(postEventDataUrl,{data: this.state}  ,config)
+      fetch(postEventDataUrl,{
+        method: 'POST', 
+        body: (this.state), 
+        headers:{
+          credentials: 'include'
+        }})
       .then( res => {
         if (this.state.isMounted)  {
           this.setState({
@@ -65,7 +61,8 @@ class EventInputData extends Component {
         })
       .catch(err => console.log(err));
     }
-
+  //set error to true if bad request
+    
     if (this.state.status !== 201) {
       if (this.state.isMounted) {
         this.setState({
