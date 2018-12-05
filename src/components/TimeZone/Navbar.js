@@ -31,7 +31,7 @@ componentDidMount() {
     },
   };
     fetch( currentUser , {credentials: 'include'})
-      .then(res => res.json())
+      .then(response => response.json())
         .then((response) => {
             if ( this.state.isMounted ) {
                 this.setState( { currentUser: response.data.username } );
