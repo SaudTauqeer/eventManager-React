@@ -4,7 +4,7 @@ import {Redirect} from "react-router-dom";
 import Alert from "./Alert";
 
 const axios = require('axios');
-const postEventDataUrl = "http://localhost:3001/api/event";
+const postEventDataUrl = "https://eventmanager-web-api.herokuapp.com/api/event";
 class EventInputData extends Component {
   constructor(props) {
     super(props);

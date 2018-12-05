@@ -61,7 +61,7 @@ import FontAwesome from 'react-fontawesome';
         <div className="cta-content">
           <div className="container">
             <h2>Stop forgetting.<br />Start managing.</h2>
-            <a href="http://localhost:3001/auth/google" className="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+            <a href="https://eventmanager-web-api.herokuapp.com/auth/google" className="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
           </div>
         </div>
         <div className="overlay" />

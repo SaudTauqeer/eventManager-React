@@ -4,8 +4,8 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,Button } fro
 import axios from "axios";
 
 
-const logoutRoute = "http://localhost:3001/auth/logout";
-const currentUser =  "http://localhost:3001/api/user";
+const logoutRoute = "https://eventmanager-web-api.herokuapp.com/auth/logout";
+const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
 
 export default class NavBar extends React.Component {
   constructor(props) {

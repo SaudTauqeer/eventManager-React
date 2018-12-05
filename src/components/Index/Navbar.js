@@ -1,7 +1,7 @@
 import React from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem,Button } from 'reactstrap';
 
-const googleAuthRoute = "http://localhost:3001/auth/google";
+const googleAuthRoute = "https://eventmanager-web-api.herokuapp.com/auth/google";
 
 export default class Example extends React.Component {
   constructor(props) {

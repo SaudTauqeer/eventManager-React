@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import "isomorphic-fetch";
 import axios from "axios";
 
-const currentUser =  "http://localhost:3001/api/user";
+const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
 
 class Date extends Component {

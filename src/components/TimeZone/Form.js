@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {Container, Form, Row, Col, FormGroup, Label, Input,Button,  } from "reactstrap";
 import {Redirect} from "react-router-dom";
 const axios = require('axios');
-const postEventDataUrl = "http://localhost:3001/api/zone";
-const userDataUrl = "http://localhost:3001/api/user";
+const postEventDataUrl = "https://eventmanager-web-api.herokuapp.com/api/zone";
+const userDataUrl = "https://eventmanager-web-api.herokuapp.com/api/user";
 
 class FormInput extends Component {
 
