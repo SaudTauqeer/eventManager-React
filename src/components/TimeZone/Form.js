@@ -32,11 +32,11 @@ class FormInput extends Component {
   onSubmit = e => {
     e.preventDefault();
     const config = {
-      credentials: "include",
+      withCredentials: true,
       headers: {
         'Content-Type': 'application/json',
       }
-    };
+    }
     axios.post(postEventDataUrl, {data: this.state}  ,config)
     .then(res => this.setState({
       status : res.status,
