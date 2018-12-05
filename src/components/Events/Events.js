@@ -61,6 +61,10 @@ class Events extends Component {
                 width: 250
             },
             {
+                Header: "Subject",
+                accessor: "subject"
+            },
+            {
                 Header: "Message",
                 accessor: "text"
             },
@@ -77,10 +81,6 @@ class Events extends Component {
                 Header: "Minutes",
                 accessor: "sendingMinutes",
                 width: 100
-            },
-            {
-                Header: "Subject",
-                accessor: "subject"
             },
             {
                 Header: "Receiver email",
