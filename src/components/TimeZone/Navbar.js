@@ -34,7 +34,7 @@ componentDidMount() {
       .then(response => response.json())
         .then((response) => {
             if ( this.state.isMounted ) {
-                this.setState( { currentUser: response.data.username } );
+                this.setState( { currentUser: response.username } );
             }
         } ).catch( err => {
           console.log(err);
