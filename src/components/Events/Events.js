@@ -91,17 +91,6 @@ class Events extends Component {
                 accessor: "from"
             },
             {
-                Header: "Actions",
-                width: 100,
-                filterable: false,
-                Cell: props => {
-                    return (
-                        <button className="btn btn-sm btn-danger" onClick={()=> this.deleteEvent(props) }>Delete</button>
-                    );
-                    
-                }
-            },
-            {
                 Header: "Status",
                 width: 100,
                 filterable: false,
@@ -112,7 +101,19 @@ class Events extends Component {
                             return <span className="text-danger"> Pending </span>
                         }
                     }
-            }
+            },
+            {
+                Header: "Actions",
+                width: 100,
+                filterable: false,
+                Cell: props => {
+                    return (
+                        <button className="btn btn-sm btn-danger" onClick={()=> this.deleteEvent(props) }>Delete</button>
+                    );
+                    
+                }
+            },
+
         ];
         
         return (
