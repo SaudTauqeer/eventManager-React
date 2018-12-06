@@ -43,24 +43,21 @@ class EventInputData extends Component {
 
 
   onSubmit = e => {
-    e.preventDefault(); 
-    // fetch data if !err from API.
-    if (!this.state.error) {
-      fetch(postEventDataUrl,{
-        method: 'POST', 
-        body: (this.state), 
-        headers:{
-          credentials: 'include'
-        }})
-      .then( res => {
-        if (this.state.isMounted)  {
+    e.preventDefault();
+    fetch(postEventDataUrl,{
+      method: 'POST', 
+      body: (this.state),
+      headers:{
+        credentials: 'include'
+      }})
+      .then(res => {
+        if (this.state.isMounted){
           this.setState({
-            status: res.status
-          }); 
+            status : res.status
+          });
         }
-        })
-      .catch(err => console.log(err));
-    }
+      }) 
+    .catch(err => console.log(err));
   //set error to true if bad request
     
     if (this.state.status !== 201) {
