@@ -32,11 +32,9 @@ class FormInput extends Component {
   onSubmit = e => {
     e.preventDefault();
     fetch(postEventDataUrl,{
+      credentials: 'include',
       method: 'POST', 
-      body: (this.state),
-      headers:{
-        credentials: 'include'
-      }})
+      body: (this.state)})
       .then(res => this.setState({
         status : res.status,
       }))

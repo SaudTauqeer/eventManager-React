@@ -47,9 +47,8 @@ class EventInputData extends Component {
     fetch(postEventDataUrl,{
       method: 'POST', 
       body: (this.state),
-      headers:{
         credentials: 'include'
-      }})
+      })
       .then(res => {
         if (this.state.isMounted){
           this.setState({
