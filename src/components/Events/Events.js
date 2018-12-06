@@ -13,9 +13,7 @@ class Events extends Component {
     }
 
     componentDidMount() {
-        fetch(restApi,{
-            method: "GET"
-        })
+        fetch(restApi, {credentials: 'include'})
         .then(response => response.json())
         .then(eventData => {
             this.setState({
