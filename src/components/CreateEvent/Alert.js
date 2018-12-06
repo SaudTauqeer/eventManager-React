@@ -14,7 +14,7 @@ class AlertBox extends React.Component {
 
   onDismiss() {
     this.setState({ visible: false });
-    window.location.reload();
+    // window.location.reload();
   }
 
   render() {
