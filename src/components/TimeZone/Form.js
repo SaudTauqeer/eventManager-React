@@ -53,6 +53,10 @@ class FormInput extends Component {
       if (this.state.isActivated && this.state.timeZoneLength !==0 ) {
         return <Redirect push to="create" />
       }
+      // if not authorized redirect.
+      if (this.state.status !== 200){
+        return <Redirect  to="/" />
+      }
          return (
           <header className="masthead">
           <div className="container h-100">

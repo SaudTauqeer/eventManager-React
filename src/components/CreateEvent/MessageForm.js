@@ -81,6 +81,10 @@ class EventInputData extends Component {
     if (this.state.status === 201) {
       return  <Redirect push to="/events" />
       }
+      // if not authorized redirect.
+          if (this.state.status !== 200){
+              return <Redirect  to="/" />
+            }
          return (
           <div>
           <Container className=" registerForm">

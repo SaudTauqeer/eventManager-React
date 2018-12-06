@@ -1,7 +1,9 @@
 // imports
 import React, {Component} from "react";
+import {Redirect} from "react-router-dom";
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
+
 const restApi = "http://eventmanager-web-api.herokuapp.com/api/event";
 
 
@@ -9,7 +11,8 @@ class Events extends Component {
     state={
         data: [],
         loaded: false,
-        err: false
+        err: false,
+        status: null
     }
 
     componentDidMount() {
@@ -18,7 +21,8 @@ class Events extends Component {
         .then(eventData => {
             this.setState({
                 data: eventData,
-                loaded: true
+                loaded: true,
+                status : eventData.status
             });
         })
     }
@@ -30,6 +34,7 @@ class Events extends Component {
 
          })
          .then(res => {
+             //when successfully deleted
              if (res.status === 200) {
                  window.location.reload();
              } 
@@ -42,6 +47,11 @@ class Events extends Component {
     }
 
     render() {
+        if (this.state.status !== 200) {
+        // if not authorized redirect.
+        return <Redirect  to="/" />
+      }
+        
         const columns = [
             {
                 Header: "Year",
