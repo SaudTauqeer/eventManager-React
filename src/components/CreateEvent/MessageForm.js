@@ -161,14 +161,11 @@ class EventInputData extends Component {
         />
       </div>
       </div>
-          <form>
           <div className="form-group">
         <label >Enter Your message *</label>
         <Input type="textarea" name="text" rows={3} placeholder="Hello Tom happy birthday!" 
         onChange={this.handleChange} />
       </div>
-    </form>
-          
         <button type="submit" onClick={this.onSubmit} className="btn btn-primary mt-5">Submit</button>
       </form>
           </div>
