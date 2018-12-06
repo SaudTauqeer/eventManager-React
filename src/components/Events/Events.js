@@ -47,11 +47,6 @@ class Events extends Component {
     }
 
     render() {
-        if (this.state.status !== 200) {
-        // if not authorized redirect.
-        return <Redirect  to="/" />
-      }
-        
         const columns = [
             {
                 Header: "Year",
