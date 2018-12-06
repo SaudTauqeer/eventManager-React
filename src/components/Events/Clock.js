@@ -10,7 +10,7 @@ const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
 class Clock extends Component {
 
     componentWillMount(){
-        fetch.get(currentUser, {credentials: 'include'})
+        fetch(currentUser, {credentials: 'include'})
         .then(res => res.json())
         .then(data => data.userZone[0].timeZone)
         .then( currentUserTimeZone => this.setState({
