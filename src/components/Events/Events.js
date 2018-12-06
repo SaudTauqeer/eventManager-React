@@ -25,7 +25,9 @@ class Events extends Component {
     
     deleteEvent = (props) =>{
          fetch(restApi + "/" + props.original._id, {
-             method: "DELETE"
+             method: "DELETE",
+             credentials: 'include'
+
          })
          .then(window.location.reload())
          .catch(err => console.log("err:", err))
