@@ -100,7 +100,6 @@ class EventInputData extends Component {
             />
           </div>
         </div>
-
         <div className="form-row">
       <div className="form-group col-md-6">
         <label >Sender Email *</label>
@@ -162,7 +161,7 @@ class EventInputData extends Component {
       </div>
       </div>
           <form>
-          <div class="form-group">
+          <div className="form-group">
         <label >Enter Your message *</label>
         <Input type="textarea" name="text" rows={3} placeholder="Hello Tom happy birthday!" 
         onChange={this.handleChange} />
