@@ -86,7 +86,7 @@ class EventInputData extends Component {
       }
          return (
           <div>
-          <Container className=" registerForm pt-5">
+          <Container className=" registerForm">
            {this.AlertPopUp()}
           <Form className="text-white">
             <Row form>
@@ -136,7 +136,7 @@ class EventInputData extends Component {
                   onChange={this.handleChange} />
     
                 </FormGroup>
-                <Button className="btn btn-sm btn-success mb-4" onClick={this.onSubmit} >Submit</Button>
+                <Button className="btn btn-sm btn-success " onClick={this.onSubmit} >Submit</Button>
                 </Col>
                 </Row>
           </Form>
