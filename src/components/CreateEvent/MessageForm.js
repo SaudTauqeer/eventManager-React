@@ -84,11 +84,12 @@ class EventInputData extends Component {
          return (
           <div>
           <Container className=" registerForm">
-           {this.AlertPopUp()}
           <Form className="text-white">
+          
             <Row form>
               <Col lg={10}>
                 <FormGroup className="pt-5">
+                {this.AlertPopUp()}
                   <Label >Event Name - Required</Label>
                   <Input type="text" name="event" placeholder="Enter Event name." onChange={this.handleChange} />
     
