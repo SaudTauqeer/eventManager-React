@@ -168,7 +168,7 @@ class EventInputData extends Component {
       </div>
     </form>
           
-        <button type="submit" onSubmit={this.onSubmit} className="btn btn-primary mt-5">Submit</button>
+        <button type="submit" onClick={this.onSubmit} className="btn btn-primary mt-5">Submit</button>
       </form>
           </div>
         );
