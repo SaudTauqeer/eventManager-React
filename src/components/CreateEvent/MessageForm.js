@@ -83,62 +83,94 @@ class EventInputData extends Component {
       }
          return (
           <div>
-          <Container className=" registerForm">
-          <Form className="text-white">
+      <form>
+          {this.AlertPopUp}
+        <div className="form-row">
+          <div className="form-group col-md-6">
+            <label >Friend name *</label>
+            <input name="event" type="text" className="form-control" placeholder="friend name"
+            onChange={this.handleChange}
+             />
+          </div>
+
+          <div className="form-group col-md-6">
+            <label >Email Subject * </label>
+            <input name="subject" type="text" className="form-control"  placeholder="Happy Birthday Tom!" 
+            onChange={this.handleChange}
+            />
+          </div>
+        </div>
+
+        <div className="form-row">
+      <div className="form-group col-md-6">
+        <label >Sender Email *</label>
+        <input name="from" type="text" className="form-control" placeholder="123@Sender.com"
+        onChange={this.handleChange}
+        />
+      </div>
+
+      <div className="form-group col-md-6">
+        <label >Receiver Email * </label>
+        <input name="to" type="text" className="form-control"  placeholder="123@Receiver.com" 
+        onChange={this.handleChange}
+        />
+      </div>
+      </div>
+      <div className="form-row">
+        <div className="form-group col-md-4">
+
+          <label >Day *</label>
+          <input name="day" type="text" className="form-control" placeholder="00"
+          onChange={this.handleChange}
+          />
+        </div>
+
+        <div className="form-group col-md-4">
+          <label >Month * </label>
+          <input name="month" type="text" className="form-control"  placeholder="00" 
+          onChange={this.handleChange}
+          />
+        </div>
+        <div className="form-group col-md-4">
+        <label >Year *</label>
+        <input name="year" type="text" className="form-control" placeholder="0000"
+        onChange={this.handleChange}
+        />
+      </div>
+        </div>
+
+        <div className="form-row">
+        <div className="form-group col-md-2">
+
+          <label >Hour *</label>
+          <input name="sendingHour" type="text" className="form-control" placeholder="24-H"
+          onChange={this.handleChange}
+          />
+        </div>
+        <div className="form-group col-md-2">
+
+          <label >Minute *</label>
+          <input name="sendingMinute" type="text" className="form-control" placeholder="00"
+          onChange={this.handleChange}
+          />
+        </div>
+        <div className="form-group col-md-8">
+        <label >Image URL  </label>
+        <input type="cardUrl" className="form-control"  placeholder="https://image.jpg" 
+        onChange={this.handleChange}
+        />
+      </div>
+      </div>
+          <form>
+          <div class="form-group">
+        <label >Enter Your message *</label>
+        <Input type="textarea" name="text" rows={3} placeholder="Hello Tom happy birthday!" 
+        onChange={this.handleChange} />
+      </div>
+    </form>
           
-            <Row form>
-              <Col lg={10}>
-                <FormGroup className="pt-5">
-                {this.AlertPopUp()}
-                  <Label >Event Name - Required</Label>
-                  <Input type="text" name="event" placeholder="Enter Event name." onChange={this.handleChange} />
-    
-                  <Label> Year - Required </Label>
-                  <Input type="text" name="year" placeholder=" Enter Year:  YYYY" 
-                  onChange={this.handleChange} />
-
-                  <Label> Month - Required </Label>
-                  <Input type="text" name="month" placeholder=" Enter Month:  MM" 
-                  onChange={this.handleChange} />
-
-                  <Label> Day - Required </Label>
-                  <Input type="text" name="day" placeholder=" Enter Day:  DD" 
-                  onChange={this.handleChange} />
-
-                  <Label >Sender - Required </Label>
-                  <Input type="text" name="from" placeholder="Email" 
-                  onChange={this.handleChange} />
-    
-                  <Label for="email"> Receiver - Required </Label>
-                  <Input type="text" name="to" placeholder="person i want to send email" 
-                  onChange={this.handleChange} />
-            
-                  <Label  >Hour - Required</Label>
-                  <Input type="text" name="sendingHour"  placeholder="Enter sending hour - 24 hour format" 
-                  onChange={this.handleChange} />
-
-                  <Label  >Minutes - Required</Label>
-                  <Input type="text" name="sendingMinutes" placeholder="Enter Sending minutes" 
-                  onChange={this.handleChange} />
-
-                  <Label  >Image Url - Optional </Label>
-                  <Input type="text" name="cardUrl" placeholder="Event related image - use image fetcher from navbar" 
-                  onChange={this.handleChange} />
-
-                  <Label  >Enter Message body - Required</Label>
-                  <Input type="textarea" name="text" placeholder="Email message body goes here" 
-                  onChange={this.handleChange} />
-
-                  <Label  >Email Subject - Required</Label>
-                  <Input type="text" name="subject" placeholder="Email message body goes here" 
-                  onChange={this.handleChange} />
-    
-                </FormGroup>
-                <Button className="btn btn-sm btn-success " onClick={this.onSubmit} >Submit</Button>
-                </Col>
-                </Row>
-          </Form>
-        </Container>
+        <button type="submit" onSubmit={this.onSubmit} className="btn btn-primary mt-5">Submit</button>
+      </form>
           </div>
         );
        }
