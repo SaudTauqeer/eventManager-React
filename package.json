@@ -17,13 +17,15 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-table": "^6.8.6",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "serve": "^10.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
