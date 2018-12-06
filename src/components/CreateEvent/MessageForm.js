@@ -51,21 +51,18 @@ class EventInputData extends Component {
         credentials: 'include'
       })
       .then(res => {
-        if (this.state.isMounted){
           this.setState({
             status : res.status
           });
-        }
       }) 
     .catch(err => console.log(err));
   //set error to true if bad request
     
     if (this.state.status !== 201) {
-      if (this.state.isMounted) {
         this.setState({
           error: true
         });
-      }}
+      }
   }
 
      AlertPopUp = () => {
@@ -83,8 +80,8 @@ class EventInputData extends Component {
       }
          return (
           <div>
-      <form>
           {this.AlertPopUp}
+      <form>
         <div className="form-row">
           <div className="form-group col-md-6">
             <label >Friend name *</label>
