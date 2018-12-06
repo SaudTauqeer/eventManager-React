@@ -155,7 +155,7 @@ class EventInputData extends Component {
         </div>
         <div className="form-group col-md-8">
         <label >Image URL  </label>
-        <input type="cardUrl" className="form-control"  placeholder="https://image.jpg" 
+        <input name="cardUrl" type="text" className="form-control"  placeholder="https://image.jpg" 
         onChange={this.handleChange}
         />
       </div>
