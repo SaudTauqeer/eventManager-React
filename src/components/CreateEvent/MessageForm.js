@@ -150,7 +150,7 @@ class EventInputData extends Component {
         <div className="form-group col-md-2">
 
           <label >Minute *</label>
-          <input name="sendingMinute" type="text" className="form-control" placeholder="00"
+          <input name="sendingMinutes" type="text" className="form-control" placeholder="00"
           onChange={this.handleChange}
           />
         </div>
