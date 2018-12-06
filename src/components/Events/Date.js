@@ -34,7 +34,7 @@ class Date extends Component {
         });
 
         
-      var intervalId =  setInterval(this.fetchDate, 2000);
+      var intervalId =  setInterval(this.fetchDate, 25000);
       this.setState({intervalId: intervalId});
         }
     })
