@@ -17,7 +17,7 @@ class Clock extends Component {
             fetchUrl:`http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`
         }))
         
-         var intervalId =  setInterval(this.fetchTime, 25000);
+         var intervalId =  setInterval(this.fetchTime, 5000);
         //store interval id in state for cleanup
         this.setState({intervalId: intervalId});
     }
