@@ -50,8 +50,8 @@ class EventInputData extends Component {
         method: 'POST', 
         body: (this.state), 
         headers:{
-          'Access-Control-Allow-Credentials': true,
-          credentials: 'include'
+          'Access-Control-Request-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+          'credentials': 'include'
         }})
       .then( res => {
         if (this.state.isMounted)  {
