@@ -33,8 +33,10 @@ class FormInput extends Component {
     e.preventDefault();
     fetch(postEventDataUrl,{
       credentials: 'include',
+      headers: {'Content-Type': 'application/json'},
       method: 'POST', 
-      body: (this.state)})
+      body: JSON.stringify({...this.state})
+    })
       .then(res => this.setState({
         status : res.status,
       }))

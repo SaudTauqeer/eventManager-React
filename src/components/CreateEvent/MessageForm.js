@@ -46,7 +46,8 @@ class EventInputData extends Component {
     e.preventDefault();
     fetch(postEventDataUrl,{
       method: 'POST', 
-      body: (this.state),
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({...this.state}),
         credentials: 'include'
       })
       .then(res => {
