@@ -29,7 +29,11 @@ class Events extends Component {
              credentials: 'include'
 
          })
-         .then(window.location.reload())
+         .then(res => {
+             if (res.status === 200) {
+                 window.location.reload();
+             } 
+         })
          .catch(err => console.log("err:", err))
     }
 
