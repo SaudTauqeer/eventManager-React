@@ -67,10 +67,10 @@ After installing all the dependencies.
 
 ## Follow these links:
 
-## Node server repo
+### Node server repo
 https://github.com/SaudTauqeer/eventReminder-NodeServer
 
-## RESTful Api repo
+### RESTful Api repo
 https://github.com/SaudTauqeer/eventReminder-RestApi
 
 
