@@ -1,28 +1,28 @@
 # Event Manager
 
-Event Manager is MERN stack web based application. That let's you schedule events/message with a image and it sends at your given time and date.
-This is my first full stack web app and it's under development. Adding more features and better optimization.
+Event Manager is MERN stack web based application, that lets you schedule events/messages with images and remind/send them at your given date and time.
+This is my first full stack web app and it's under development - will add more features and provide better optimization.
 
 ## Live Project
 http://eventmanager-web.herokuapp.com
-Note: it will not work in `https`
+Note: It will not work in `https`
 
 ## Getting Started
 
-`npm run dev` will run the app in dev mode. You have to specify envoirnment variables beforehand to make it work.
-Envoirment variables needed to run this are : `REACT_APP_TIME_API_KEY`.
+`npm run dev` will run the app in dev mode. You have to specify Environment variables beforehand to make it work.
+Environment variables needed to run this are : `REACT_APP_TIME_API_KEY`.
 The timezone API used is https://timezonedb.com/api
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What you need to install the app and how to install them
 
 Simply run `npm start dev` in the root directory to get the front-end running.
-Note: You will have to run the node server and RESTapi this app consumes in order to make it fully funtional.
+Note: You will have to run the node server and RESTapi this app consumes in order to make it fully functional.
 
 
 ### Installing
 
-First and foremost install all the dependencies needed to run the app.
+First, install all the dependencies needed to run the app.
 
 package.json looks like this.
 
@@ -57,11 +57,11 @@ package.json looks like this.
     "heroku-postbuild": "npm run build"
   }
 ```
-now do `npm i` or `npm install`
+Now run `npm i` or `npm install`
 
-After installing all the dependencies.
+After installing all the dependencies:
 
-`npm run dev` or `npm start`
+`npm start dev` or `npm start`
 
 ![Home page image ](https://raw.githubusercontent.com/SaudTauqeer/eventReminder-React/master/Screenshot%20(7).png "Title")
 
@@ -77,7 +77,7 @@ https://github.com/SaudTauqeer/eventReminder-RestApi
 
 ## Deployment
 
-i have simply deployed it on heroku with github integration.
+I have simply deployed it on Heroku with github integration.
 
 
 ## Authors
@@ -87,22 +87,24 @@ i have simply deployed it on heroku with github integration.
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the MIT License.
 
-## Fixes
+## Under fixing
 * Memory Leak.
-The app still have some memory. i fixed them earlier  --> commit id : `b9e78612c4070931e7997e94fb5ad1e8dd0a2c13` but it was using axios and its `cancelSourceToken`.
-After running into several preflight issues with sending credentials to the API. I discovered that is issue is with axios that setting `axios.defaults.withCredentials = true;` and not using an instance of `withCredentials` at all solves the issue.
-Hence i shifted to `fetch` for better support and had to drop memory leak --> commit id : `b937363fe1d7ccf635bf405d719a19351905fb7b`.
+The app still have some memory. I fixed them earlier  --> commit id : `b9e78612c4070931e7997e94fb5ad1e8dd0a2c13` but it was using axios and its `cancelSourceToken`.
+After running into several preflight issues with sending credentials to the API, I discovered that it is an issue with axios that the setting `axios.defaults.withCredentials = true;` and not using an instance of `withCredentials` at all, solves the issue.
+Hence I shifted to `fetch` for better support and had to drop memory leak --> commit id : `b937363fe1d7ccf635bf405d719a19351905fb7b`.
 The memory leak issue can be resolved more elegantly using React hooks.
 
 * Heroku idling.
 Heroku free tier dyano idles your app after 30 minutes of inactivity. So i created endpoints on the API and server.
-And i'm sending a request to them periodically to keep the server awaken. Otherwise it will not process the sending of emails.
+And I'm sending a request to them periodically to keep the server awake. Otherwise it will not process the sending of emails.
+
+* Form needs more validation and better routing can be added.
 
 ## Fixes for API and Node server are in their respective README.md
 
 ## Acknowledgments
-I have used this bootstrap template and used with react-strap and edited it according to my need.
+I have used this Bootstrap template with react-strap and edited it according to my need.
 * https://startbootstrap.com/template-overviews/new-age/
 
