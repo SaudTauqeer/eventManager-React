@@ -100,15 +100,15 @@ The memory leak issue can be resolved more elegantly using React hooks.
 Heroku free tier dyano idles your app after 30 minutes of inactivity. So i created endpoints on the API and server.
 And I'm sending a request to them periodically to keep the server awake. Otherwise it will not process the sending of emails.
 
-* ~~Form needs more validation and better routing can be added~~ Before form validation was done on the REST api but now after testing and thinking about it, it's best to move the validation to the React side -> less consumption of server resources -> better managment with state -> better validation time rather than waiting for a response from the API -> as well as live validation.
+* ~~Form needs more validation and better routing can be added~~ Before form validation was done on the REST API but now after testing and thinking about it, it's best to move the validation to the React side -> less consumption of server resources -> better management with state -> better validation time rather than waiting for a response from the API -> as well as live validation.
 
-* For better Redirects i'm currently looking into Protected -> React is my preffered choice for now but i'm also looking into NextJs.
+* For better Redirects I'm currently looking into Protected -> React is my preferred choice for now but I'm also looking into NextJs.
 
-* Will be removing the option of letting user input a sending email. User can add a permanent sending email -> to prevent spoof emails -> and use the app as a spam bot. 
+* Will be removing the option of letting the user input a sending email. The user can add a permanent sending email -> to prevent spoof emails -> and use the app as a spambot. 
 
-* UI improvements ->  Working on letting user edit their saved event, let them change timezone - timezone will be stored and shown in a dropdown and they can change timezones at any time. Add Component specfic rendering such as for event sent status, date and time rendering.  Full fledged Form validation such as checking for a correct email, correct time vice virsa. Let user delete their account permanently -> user will not be able to register with that email again as to prevent any sinister usage of the app.
+* UI improvements ->  Working on letting the user edit their saved event, let them change timezone - timezone will be stored and shown in a dropdown and they can change timezones at any time. Add Component-specific renderings such as for event sent status, date and time rendering.  Full-fledged Form validation such as checking for a correct email, correct time vice virsa. Let user delete their account permanently -> user will not be able to register with that email again as to prevent any sinister usage of the app.
 
-### The core functioanlity of the App is working but i'm actively developing on new changes i have written in the changelog to ofcouse make the app functional better and let users experience a more friendly and smooth experience.
+### The core functionality of the App is working but I'm actively developing on new changes I have written in the changelog to of course make the app functional better and let users experience a more friendly and smooth experience.
 
 ## Fixes for API and Node server are in their respective README.md
 
