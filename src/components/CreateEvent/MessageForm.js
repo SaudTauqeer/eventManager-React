@@ -26,6 +26,7 @@ class EventInputData extends Component {
       to: null,
       from : null,
       redirect: false,
+      html :"no html",
       sent: false
     };
   }

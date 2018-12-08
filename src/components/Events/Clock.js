@@ -31,8 +31,6 @@ class Clock extends Component {
         h: null,
         m: null,
         isTimeLoaded: false,
-        executeTimeHour: this.executeTimeHour,
-        executeTimeMinutes:this.executeTimeMinutes,
         intervalId: null,
         timeZone: null
 
