@@ -108,7 +108,7 @@ And I'm sending a request to them periodically to keep the server awake. Otherwi
 
 * UI improvements ->  Working on letting user edit their saved event, let them change timezone - timezone will be stored and shown in a dropdown and they can change timezones at any time. Add Component specfic rendering such as for event sent status, date and time rendering.  Full fledged Form validation such as checking for a correct email, correct time vice virsa. Let user delete their account permanently -> user will not be able to register with that email again as to prevent any sinister usage of the app.
 
-### The core functioanlity of the App is working but i'm actively developing on new changes i have written in the changelog to, to ofcouse make the app functional better and let users experience a more friendly and smooth experience.
+### The core functioanlity of the App is working but i'm actively developing on new changes i have written in the changelog to ofcouse make the app functional better and let users experience a more friendly and smooth experience.
 
 ## Fixes for API and Node server are in their respective README.md
 
