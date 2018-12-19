@@ -102,7 +102,7 @@ And I'm sending a request to them periodically to keep the server awake. Otherwi
 
 * ~~Form needs more validation and better routing can be added~~ Before form validation was done on the REST API but now after testing and thinking about it, it's best to move the validation to the React side -> less consumption of server resources -> better management with state -> better validation time rather than waiting for a response from the API -> as well as live validation.
 
-* For better Redirects I'm currently looking into Protected -> React is my preferred choice for now but I'm also looking into NextJs.
+* For better Redirects I'm currently looking into Protected Routes -> React is my preferred choice for now but I'm also looking into NextJs.
 
 * Will be removing the option of letting the user input a sending email. The user can add a permanent sending email -> to prevent spoof emails -> and use the app as a spambot. 
 
