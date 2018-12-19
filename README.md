@@ -106,7 +106,11 @@ And I'm sending a request to them periodically to keep the server awake. Otherwi
 
 * Will be removing the option of letting the user input a sending email. The user can add a permanent sending email -> to prevent spoof emails -> and use the app as a spambot. 
 
-* UI improvements ->  Working on letting the user edit their saved event, let them change timezone - timezone will be stored and shown in a dropdown and they can change timezones at any time. Add Component-specific renderings such as for event sent status, date and time rendering.  Full-fledged Form validation such as checking for a correct email, correct time vice virsa. Let user delete their account permanently -> user will not be able to register with that email again as to prevent any sinister usage of the app.
+* UI improvements ->  Working on letting the user edit their saved event, let them change timezone - timezone will be stored and shown in a dropdown and they can change timezones at any time. Add Component-specific renderings such as for event sent status, date and time rendering.  Full-fledged Form validation such as checking for a correct email, correct time vice virsa. Let user delete their account permanently -> user will not be able to register with that email again as to prevent any sinister usage of the app. 
+
+* Removing fix timezone as it's the first sign of a bad database design. I have worked on a solution that will be added with the rest of features that will fetch time and date based on user's Ip address.
+
+* Create Event page will be removed, instead a modal will be a displayed when clicked create event on the events section. Trying to improve overall UX experience.
 
 ### The core functionality of the App is working but I'm actively developing on new changes I have written in the changelog to of course make the app functional better and let users experience a more friendly and smooth experience.
 
