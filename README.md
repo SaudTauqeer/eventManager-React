@@ -3,6 +3,16 @@
 Event Manager is MERN stack web based application, that lets you schedule events/messages with images and remind/send them at your given date and time.
 This is my first full stack web app and it's under development - will add more features and provide better optimization.
 
+## Project Idea
+The whole intention of making this project :
+* Let users sign up.
+* Create events(messages)with image to be sent at specfic date and time via E-mail.
+* Let users create many events(messages), such as all upcomming birthdays for next 4 months.
+* Show status of the event(message).
+* It will actually show your email on the reciever's end but it's actually just a dummy email.
+* All replies will be sent to you directly by the user.
+
+
 ## Live Project
 http://eventmanager-web.herokuapp.com
 Note: It will not work in `https`
@@ -61,7 +71,7 @@ Now run `npm i` or `npm install`
 
 After installing all the dependencies:
 
-`npm start dev` or `npm start`
+ `npm start`
 
 ![Home page image ](https://raw.githubusercontent.com/SaudTauqeer/eventReminder-React/master/Screenshot%20(7).png "Title")
 
