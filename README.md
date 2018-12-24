@@ -1,7 +1,7 @@
 # Event Manager
 
 Event Manager is MERN stack web based application, that lets you schedule events/messages with images and remind/send them at your given date and time.
-This is my first full stack web app and it's under development - will add more features and provide better optimization.
+This is my first full stack web app and it's under development - adding more features and provide better optimization.
 
 ## Project Idea
 The whole intention of making this project :
