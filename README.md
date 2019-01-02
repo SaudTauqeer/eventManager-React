@@ -1,7 +1,17 @@
 # Event Manager
 
 Event Manager is MERN stack web based application, that lets you schedule events/messages with images and remind/send them at your given date and time.
-This is my first full stack web app and it's under development - will add more features and provide better optimization.
+This is my first full stack web app and it's under development - adding more features and better optimization.
+
+## Project Idea
+The whole intention of making this project :
+* Let users sign up.
+* Create events(messages)with image to be sent at specfic date and time via E-mail.
+* Let users create many events(messages), such as all upcomming birthdays for next 4 months.
+* Show status of the event(message).
+* It will actually show your email on the reciever's end but it's actually just a dummy email.
+* All replies will be sent to you directly by the user.
+
 
 ## Live Project
 http://eventmanager-web.herokuapp.com
@@ -61,7 +71,7 @@ Now run `npm i` or `npm install`
 
 After installing all the dependencies:
 
-`npm start dev` or `npm start`
+ `npm start`
 
 ![Home page image ](https://raw.githubusercontent.com/SaudTauqeer/eventReminder-React/master/Screenshot%20(7).png "Title")
 
@@ -102,11 +112,15 @@ And I'm sending a request to them periodically to keep the server awake. Otherwi
 
 * ~~Form needs more validation and better routing can be added~~ Before form validation was done on the REST API but now after testing and thinking about it, it's best to move the validation to the React side -> less consumption of server resources -> better management with state -> better validation time rather than waiting for a response from the API -> as well as live validation.
 
-* For better Redirects I'm currently looking into Protected -> React is my preferred choice for now but I'm also looking into NextJs.
+* For better Redirects I'm currently looking into Protected Routes -> React is my preferred choice for now but I'm also looking into NextJs.
 
 * Will be removing the option of letting the user input a sending email. The user can add a permanent sending email -> to prevent spoof emails -> and use the app as a spambot. 
 
-* UI improvements ->  Working on letting the user edit their saved event, let them change timezone - timezone will be stored and shown in a dropdown and they can change timezones at any time. Add Component-specific renderings such as for event sent status, date and time rendering.  Full-fledged Form validation such as checking for a correct email, correct time vice virsa. Let user delete their account permanently -> user will not be able to register with that email again as to prevent any sinister usage of the app.
+* UI improvements ->  Working on letting the user edit their saved event, let them change timezone - timezone will be stored and shown in a dropdown and they can change timezones at any time. Add Component-specific renderings such as for event sent status, date and time rendering.  Full-fledged Form validation such as checking for a correct email, correct time vice virsa. Let user delete their account permanently -> user will not be able to register with that email again as to prevent any sinister usage of the app. 
+
+* Removing fix timezone as it's the first sign of a bad database design. I have worked on a solution that will be added with the rest of features that will fetch time and date based on user's Ip address.
+
+* Create Event page will be removed, instead a modal will be a displayed when clicked create event on the events section. Trying to improve overall UX experience.
 
 ### The core functionality of the App is working but I'm actively developing on new changes I have written in the changelog to of course make the app functional better and let users experience a more friendly and smooth experience.
 
