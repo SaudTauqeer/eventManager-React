@@ -2,18 +2,17 @@
 import React, {Component,} from "react";
 import "isomorphic-fetch";
 
-
+const timeApiUri = "http://api.timezonedb.com/v2.1/get-time-zone";
 
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
-const timeApiUri = "https://api.timezonedb.com/v2.1/get-time-zone";
-const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
+const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
 
 
 class Clock extends Component {
 
     componentWillMount(){
-        fetch(currentUser, {credentials: 'include'})
-        .then(res => res.json())
+        fetch(currentUser , {credentials: 'include'})
+        .then(response => response.json())
         .then(data => data.userZone[0].timeZone)
         .then( currentUserTimeZone => this.setState({
             fetchUrl: `${timeApiUri}?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`
