@@ -5,8 +5,8 @@ import "isomorphic-fetch";
 
 
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
-const timeApiUri = "http://api.timezonedb.com/v2.1/get-time-zone";
-const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
+const timeApiUri = "https://api.timezonedb.com/v2.1/get-time-zone";
+const currentUser =  "https://eventmanager-web-api.herokuapp.com/api/user";
 
 
 class Clock extends Component {
