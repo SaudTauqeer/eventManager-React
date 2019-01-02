@@ -3,7 +3,9 @@ import React, {Component,} from "react";
 import "isomorphic-fetch";
 
 
+
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
+const timeApiUri = "http://api.timezonedb.com/v2.1/get-time-zone";
 const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
 
 
@@ -14,7 +16,7 @@ class Clock extends Component {
         .then(res => res.json())
         .then(data => data.userZone[0].timeZone)
         .then( currentUserTimeZone => this.setState({
-            fetchUrl:`http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`
+            fetchUrl: `${timeApiUri}?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`
         }))
         
          var intervalId =  setInterval(this.fetchTime, 5000);

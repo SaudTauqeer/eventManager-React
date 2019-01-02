@@ -2,6 +2,7 @@
 import React, {Component} from "react";
 import "isomorphic-fetch";
 
+const timeApiUri = "http://api.timezonedb.com/v2.1/get-time-zone";
 const currentUser =  "http://eventmanager-web-api.herokuapp.com/api/user";
 let apiKey = process.env.REACT_APP_TIME_API_KEY;
 
@@ -30,7 +31,7 @@ class Date extends Component {
         .then( currentUserTimeZone => { 
             if (this.state.isMounted){
             this.setState({
-            fetchUrl:`http://vip.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`
+                fetchUrl: `${timeApiUri}?key=${apiKey}&format=json&by=zone&zone=${currentUserTimeZone}`
         });
 
         
