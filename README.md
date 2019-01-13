@@ -19,7 +19,7 @@ Note: It will not work in `https`
 
 ## Getting Started
 
-`npm run dev` will run the app in dev mode. You have to specify Environment variables beforehand to make it work.
+`npm start` will run the app. You have to specify Environment variables beforehand to make it work.
 Environment variables needed to run this are : `REACT_APP_TIME_API_KEY`.
 The timezone API used is https://timezonedb.com/api
 ### Prerequisites
