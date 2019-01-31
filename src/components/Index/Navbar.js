@@ -25,6 +25,8 @@ export default class Example extends React.Component {
     await fetch("eventmanager-server.herokuapp.com").then(res => {
       if (res.status === 200) {
         console.log("Node server running");
+      } else {
+        console.log("Server starting up...");
       }
     });
   }
